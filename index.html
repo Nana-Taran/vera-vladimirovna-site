@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO ОСНОВНЫЕ -->
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}" />
+  <meta name="keywords" content="{{SITE_KEYWORDS}}" />
+  <meta name="author" content="{{MASTER_NAME}}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{SITE_URL}}" />
+
+  <!-- GEO META — показываемся в нужных странах -->
+  <meta name="geo.region" content="AT;DE;IL;US;CA;GB;FR;IT;ES;PL;CZ;BE;NL;SE;CH;NO;FI;PT;GR" />
+  <meta name="geo.placename" content="Europe, Israel, USA, Canada, Australia" />
+  <meta name="target" content="all" />
+  <meta name="audience" content="all" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="Global" />
+  <meta name="language" content="Russian" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{SITE_URL}}" />
+  <meta property="og:title" content="{{SITE_TITLE}}" />
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}" />
+  <meta property="og:image" content="{{SITE_URL}}/images/og/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="{{MASTER_NAME}}" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{SITE_TITLE}}" />
+  <meta name="twitter:description" content="{{SITE_DESCRIPTION}}" />
+  <meta name="twitter:image" content="{{SITE_URL}}/images/og/og-image.jpg" />
+
+  <!-- SCHEMA.ORG — JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{MASTER_NAME}}",
+    "jobTitle": "{{MASTER_TITLE}}",
+    "description": "{{MASTER_DESCRIPTION}}",
+    "url": "{{SITE_URL}}",
+    "telephone": "{{MASTER_PHONE}}",
+    "email": "{{MASTER_EMAIL}}",
+    "image": "{{SITE_URL}}/images/hero/hero-banner.jpg",
+    "sameAs": [
+      "{{TELEGRAM_URL}}",
+      "{{INSTAGRAM_URL}}"
+    ],
+    "areaServed": [
+      {"@type": "Country", "name": "Austria"},
+      {"@type": "Country", "name": "Germany"},
+      {"@type": "Country", "name": "Israel"},
+      {"@type": "Country", "name": "United States"},
+      {"@type": "Country", "name": "Canada"},
+      {"@type": "Country", "name": "United Kingdom"},
+      {"@type": "Country", "name": "France"},
+      {"@type": "Country", "name": "Italy"},
+      {"@type": "Country", "name": "Spain"},
+      {"@type": "Country", "name": "Poland"},
+      {"@type": "Country", "name": "Czech Republic"},
+      {"@type": "Country", "name": "Belgium"},
+      {"@type": "Country", "name": "Netherlands"},
+      {"@type": "Country", "name": "Sweden"},
+      {"@type": "Country", "name": "Switzerland"},
+      {"@type": "Country", "name": "Norway"},
+      {"@type": "Country", "name": "Finland"},
+      {"@type": "Country", "name": "Portugal"},
+      {"@type": "Country", "name": "Greece"},
+      {"@type": "Country", "name": "Australia"}
+    ],
+    "availableLanguage": ["Russian", "Ukrainian"],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "availableDeliveryMethod": "https://schema.org/OnSitePickup"
+    }
+  }
+  </script>
+
+  <!-- AI ПОИСКОВИКИ — GEO ОПТИМИЗАЦИЯ -->
+  <meta name="ai-content-type" content="professional-services" />
+  <meta name="ai-topic" content="psychic, tarot, clairvoyant, esoteric services" />
+  <meta name="ai-audience" content="Russian-speaking diaspora in Europe, USA, Canada, Israel" />
+
+  <link rel="stylesheet" href="/src/index.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

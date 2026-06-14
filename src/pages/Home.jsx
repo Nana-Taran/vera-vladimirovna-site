@@ -1,0 +1,37 @@
+import Navbar from '@/components/vera/Navbar';
+import Hero from '@/components/vera/Hero';
+import IconStrip from '@/components/vera/IconStrip';
+import WhenToReach from '@/components/vera/WhenToReach';
+import HowWeWork from '@/components/vera/HowWeWork';
+import Services from '@/components/vera/Services';
+import About from '@/components/vera/About';
+import VideoSection from '@/components/vera/VideoSection';
+import Reviews from '@/components/vera/Reviews';
+import Certificates from '@/components/vera/Certificates';
+import HowNotToMistake from '@/components/vera/HowNotToMistake';
+import FAQ from '@/components/vera/FAQ';
+import FinalCTA from '@/components/vera/FinalCTA';
+import Footer from '@/components/vera/Footer';
+import FAB from '@/components/vera/FAB';
+
+export default function Home() {
+  return (
+    <div style={{ background: 'var(--bg-deep)', minHeight: '100vh' }}>
+      <Navbar />
+      <Hero />
+      <IconStrip />
+      <WhenToReach />
+      <HowWeWork />
+      <Services />
+      <About />
+      <VideoSection />
+      <Reviews />
+      <Certificates />
+      <HowNotToMistake />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+      <FAB />
+    </div>
+  );
+}

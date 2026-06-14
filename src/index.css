@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Lobster&family=Montserrat:wght@400;600&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-deep: #090604;
+    --bg-dark: #1A0E07;
+    --bg-card: #1E1205;
+    --accent: #E86617;
+    --accent-bright: #F0781B;
+    --accent-glow: #A9430E;
+    --text-white: #F4EFE5;
+    --text-beige: #D99670;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-white);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+  .font-oswald { font-family: 'Oswald', sans-serif; font-weight: 700; }
+  .font-lobster { font-family: 'Lobster', cursive; }
+  .font-montserrat { font-family: 'Montserrat', sans-serif; }
+  .font-lato { font-family: 'Lato', sans-serif; }
+
+  .text-accent { color: var(--accent); }
+  .text-accent-glow { color: var(--accent-glow); }
+  .text-beige { color: var(--text-beige); }
+
+  .bg-deep { background-color: var(--bg-deep); }
+  .bg-vera-dark { background-color: var(--bg-dark); }
+  .bg-vera-card { background-color: var(--bg-card); }
+
+  .hero-gradient {
+    background: linear-gradient(to right, rgba(9,6,4,0.92) 0%, rgba(9,6,4,0.75) 40%, rgba(9,6,4,0.1) 75%, transparent 100%);
+  }
+
+  .glow-bg {
+    background: radial-gradient(ellipse at 50% 50%, rgba(169,67,14,0.35) 0%, rgba(9,6,4,0) 65%);
+  }
+
+  .glow-bg-right {
+    background: radial-gradient(ellipse at 70% 50%, rgba(185,74,15,0.5) 0%, rgba(58,27,10,0.3) 40%, rgba(9,6,4,0) 100%);
+  }
+
+  .light-section-watermark {
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    font-size: clamp(120px, 25vw, 300px);
+    color: rgba(169,67,14,0.04);
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+}
+
+/* Hero background — responsive, loads only the needed image */
+.hero-bg {
+  background-image: url('/images/hero/vera-hero-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-image: url('/images/hero/vera-hero-banner-mobile.jpg');
+    background-position: top center;
+  }
+}

@@ -1,0 +1,112 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Услуги', href: '#services' },
+  { label: 'Обо мне', href: '#about' },
+  { label: 'Отзывы', href: '#reviews' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Контакты', href: '#contacts' },
+];
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <header
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      style={{
+        backgroundColor: scrolled ? 'rgba(9,6,4,0.97)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(232,102,23,0.25)' : '1px solid transparent',
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <a href="#hero" className="font-lobster transition-opacity hover:opacity-80" style={{ color: 'var(--accent)', fontSize: '28px' }}>
+            Вера Владимировна
+          </a>
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-montserrat text-xs font-semibold uppercase tracking-widest transition-colors hover:opacity-80"
+                style={{ color: 'var(--text-beige)', letterSpacing: '0.15em' }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="#contacts"
+              className="font-montserrat text-xs font-semibold px-4 py-2 rounded transition-all hover:opacity-80"
+              style={{ border: '1px solid var(--accent)', color: 'var(--accent)', letterSpacing: '0.1em' }}
+            >
+              Написать ▾
+            </a>
+            <a
+              href="#contacts"
+              className="font-montserrat text-xs font-bold px-4 py-2 rounded transition-all hover:opacity-90"
+              style={{ background: 'var(--accent)', color: 'var(--bg-deep)', letterSpacing: '0.05em' }}
+            >
+              Оставить заявку
+            </a>
+          </div>
+          <button
+            className="lg:hidden p-2"
+            style={{ color: 'var(--accent)' }}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Меню"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden overflow-hidden"
+            style={{ background: 'rgba(9,6,4,0.98)', borderTop: '1px solid rgba(232,102,23,0.2)' }}
+          >
+            <div className="px-4 py-6 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="font-montserrat text-sm font-semibold uppercase tracking-widest py-2"
+                  style={{ color: 'var(--text-beige)', borderBottom: '1px solid rgba(232,102,23,0.1)' }}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <div className="flex flex-col gap-3 pt-2">
+                <a
+                  href="#contacts"
+                  onClick={() => setMobileOpen(false)}
+                  className="font-montserrat text-sm font-bold py-3 text-center rounded"
+                  style={{ background: 'var(--accent)', color: 'var(--bg-deep)' }}
+                >
+                  Оставить заявку
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
