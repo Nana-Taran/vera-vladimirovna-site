@@ -23,9 +23,42 @@ const includes = [
 export default function WhenToReach() {
   return (
     <section
-      className="relative overflow-hidden py-20 md:py-28 lg:py-36 px-4"
-      style={{ background: 'var(--text-white)' }}
+      className="relative overflow-hidden px-4"
+      style={{
+        background: 'var(--text-white)',
+        marginTop: '-150px',
+        paddingTop: 'calc(5rem + 150px)',
+        paddingBottom: '9rem',
+      }}
     >
+      {/* Decorative swirl */}
+      <svg
+        className="absolute pointer-events-none hidden md:block"
+        style={{
+          bottom: '10%',
+          right: '3%',
+          width: '220px',
+          opacity: 0.12,
+          zIndex: 0,
+        }}
+        viewBox="0 0 220 300" fill="none"
+      >
+        <path
+          d="M180 20 C140 80 200 140 160 200 C120 260 60 240 40 300"
+          stroke="#A9430E"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M200 10 C160 70 220 130 180 190 C140 250 80 230 60 290"
+          stroke="#A9430E"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+        <circle cx="182" cy="18" r="4" fill="#A9430E" opacity="0.5"/>
+        <circle cx="42" cy="298" r="3" fill="#A9430E" opacity="0.3"/>
+      </svg>
       <div
         className="absolute font-lobster pointer-events-none select-none"
         style={{

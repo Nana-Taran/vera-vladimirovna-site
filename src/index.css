@@ -83,17 +83,33 @@
   }
 }
 
-/* Hero background — responsive, loads only the needed image */
+/* Hero background — responsive */
 .hero-bg {
   background-image: url('/images/hero/vera-hero-banner.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .hero-bg {
     background-image: url('/images/hero/vera-hero-banner-mobile.jpg');
-    background-position: top center;
+    background-size: contain;
+    background-position: center top;
+    background-color: #090604;
   }
+}
+
+/* Hero gradient visibility */
+#hero-gradient-desktop { display: none; }
+#hero-gradient-mobile  { display: block; }
+
+@media (min-width: 641px) {
+  #hero-gradient-desktop { display: block; }
+  #hero-gradient-mobile  { display: none; }
+}
+
+/* Hero mobile height */
+@media (max-width: 640px) {
+  #hero { height: calc(110vw + 290px) !important; }
 }

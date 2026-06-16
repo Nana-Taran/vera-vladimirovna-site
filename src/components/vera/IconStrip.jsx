@@ -31,7 +31,10 @@ const items = [
 
 export default function IconStrip() {
   return (
-    <section className="relative z-20 px-4" style={{ marginTop: '-60px' }}>
+    <div
+      className="relative z-20 px-4"
+      style={{ marginTop: '0' }}
+    >
       <motion.div
         className="max-w-4xl mx-auto rounded-xl px-6 py-6 md:py-8"
         style={{ background: 'var(--bg-dark)' }}
@@ -45,7 +48,7 @@ export default function IconStrip() {
             <div key={i} className="flex">
               {i > 0 && (
                 <div
-                  className="hidden md:block w-px flex-shrink-0 mx-0"
+                  className="hidden md:block w-px flex-shrink-0"
                   style={{ background: 'rgba(232,102,23,0.2)' }}
                 />
               )}
@@ -70,6 +73,6 @@ export default function IconStrip() {
           ))}
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 }
