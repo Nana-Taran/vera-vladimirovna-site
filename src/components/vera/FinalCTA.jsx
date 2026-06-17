@@ -5,19 +5,19 @@ const messengers = [
   {
     label: 'Telegram',
     icon: <Send size={20} />,
-    href: '#',
+    href: 'https://t.me/Vera_vladimerovna',
     color: '#229ED9',
   },
   {
     label: 'WhatsApp',
     icon: <Phone size={20} />,
-    href: '#',
+    href: 'https://wa.me/995558314030',
     color: '#25D366',
   },
   {
     label: 'Viber',
     icon: <MessageSquare size={20} />,
-    href: '#',
+    href: 'viber://chat?number=995558314030',
     color: '#7360F2',
   },
 ];

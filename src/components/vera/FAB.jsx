@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Phone, MessageSquare, X } from 'lucide-react';
 
 const messengers = [
-  { label: 'Telegram', icon: <Send size={18} />, href: '#', color: '#229ED9' },
-  { label: 'WhatsApp', icon: <Phone size={18} />, href: '#', color: '#25D366' },
-  { label: 'Viber', icon: <MessageSquare size={18} />, href: '#', color: '#7360F2' },
+  { label: 'Telegram', icon: <Send size={18} />, href: 'https://t.me/Vera_vladimerovna', color: '#229ED9' },
+  { label: 'WhatsApp', icon: <Phone size={18} />, href: 'https://wa.me/995558314030', color: '#25D366' },
+  { label: 'Viber', icon: <MessageSquare size={18} />, href: 'viber://chat?number=995558314030', color: '#7360F2' },
 ];
 
 export default function FAB() {

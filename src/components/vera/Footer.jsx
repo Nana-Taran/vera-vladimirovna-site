@@ -10,9 +10,9 @@ const navLinks = [
 
 const socials = [
   { icon: <Camera size={18} />, href: '#', label: 'Instagram' },
-  { icon: <Send size={18} />, href: '#', label: 'Telegram' },
-  { icon: <Phone size={18} />, href: '#', label: 'WhatsApp' },
-  { icon: <MessageSquare size={18} />, href: '#', label: 'Viber' },
+  { icon: <Send size={18} />, href: 'https://t.me/Vera_vladimerovna', label: 'Telegram' },
+  { icon: <Phone size={18} />, href: 'https://wa.me/995558314030', label: 'WhatsApp' },
+  { icon: <MessageSquare size={18} />, href: 'viber://chat?number=995558314030', label: 'Viber' },
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

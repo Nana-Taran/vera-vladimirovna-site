@@ -31,106 +31,76 @@ export default function WhenToReach() {
         paddingBottom: '9rem',
       }}
     >
-      {/* Single background glow — bottom-right spotlight, stronger */}
+      {/* Glow layer 1 — wide warm field, right half bottom */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(ellipse 88% 80% at 100% 100%,
-            rgba(200,80,10,0.82) 0%,
-            rgba(220,95,15,0.58) 16%,
-            rgba(232,102,23,0.32) 34%,
-            rgba(232,102,23,0.12) 54%,
-            transparent 70%)`,
+          background: `radial-gradient(ellipse 130% 90% at 88% 100%,
+            rgba(195,72,8,0.75) 0%,
+            rgba(215,88,12,0.52) 20%,
+            rgba(230,100,20,0.28) 42%,
+            rgba(232,102,23,0.10) 62%,
+            transparent 78%)`,
+          zIndex: 0,
+        }}
+      />
+      {/* Glow layer 2 — additional warmth spreading up */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse 95% 80% at 78% 85%,
+            rgba(210,85,10,0.48) 0%,
+            rgba(225,100,18,0.28) 30%,
+            rgba(232,102,23,0.10) 58%,
+            transparent 75%)`,
           zIndex: 0,
         }}
       />
 
-      {/* Vertical swirls — right edge, top to bottom */}
+      {/* Swirls — large diagonal calligraphic strokes like reference */}
       <svg
         className="absolute pointer-events-none hidden md:block"
         style={{
-          top: '8%',
-          right: '0%',
-          width: '38%',
-          height: '85%',
+          top: '5%',
+          right: '-2%',
+          width: '45%',
+          height: '92%',
           zIndex: 0,
         }}
-        viewBox="0 0 380 520" preserveAspectRatio="xMaxYMid meet" fill="none"
+        viewBox="0 0 420 560" preserveAspectRatio="xMaxYMid meet" fill="none"
       >
+        {/* Main thick stroke */}
         <path
-          d="M340 20 C390 100 310 190 270 290 C230 390 285 460 310 510"
-          stroke="#E86617"
-          strokeWidth="3.5"
+          d="M380 10 C430 80 370 160 330 250 C290 340 330 420 360 530"
+          stroke="#C8520A"
+          strokeWidth="5"
           strokeLinecap="round"
           fill="none"
-          opacity="0.5"
+          opacity="0.48"
         />
+        {/* Second stroke, offset */}
         <path
-          d="M360 15 C410 95 330 185 290 285 C250 385 305 455 330 505"
-          stroke="#F0781B"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.3"
-        />
-        <path
-          d="M320 25 C370 105 290 195 250 295 C210 395 265 465 290 515"
-          stroke="#A9430E"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.2"
-        />
-      </svg>
-
-      {/* Horizontal swirls — behind the card, right half */}
-      <svg
-        className="absolute pointer-events-none hidden md:block"
-        style={{
-          top: '18%',
-          right: '2%',
-          width: '52%',
-          height: '70%',
-          zIndex: 0,
-        }}
-        viewBox="0 0 520 380" preserveAspectRatio="xMaxYMid meet" fill="none"
-      >
-        <path
-          d="M0 80 C80 40 160 120 260 80 C360 40 440 120 520 80"
-          stroke="#E86617"
+          d="M400 5 C450 75 390 155 350 245 C310 335 350 415 380 525"
+          stroke="#D4620C"
           strokeWidth="3"
           strokeLinecap="round"
           fill="none"
-          opacity="0.42"
+          opacity="0.32"
         />
+        {/* Third stroke, lighter */}
         <path
-          d="M0 115 C80 75 160 155 260 115 C360 75 440 155 520 115"
-          stroke="#F0781B"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.28"
-        />
-        <path
-          d="M0 148 C80 108 160 188 260 148 C360 108 440 188 520 148"
+          d="M360 15 C410 85 350 165 310 255 C270 345 310 425 340 535"
           stroke="#A9430E"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.18"
-        />
-        <path
-          d="M30 200 C110 160 190 240 290 200 C390 160 470 240 520 205"
-          stroke="#E86617"
           strokeWidth="2"
           strokeLinecap="round"
           fill="none"
-          opacity="0.22"
+          opacity="0.20"
         />
+        {/* Thin accent */}
         <path
-          d="M0 270 C100 230 200 310 300 270 C400 230 480 300 520 270"
-          stroke="#F0781B"
-          strokeWidth="1.5"
+          d="M415 20 C465 90 405 170 365 260 C325 350 365 430 395 540"
+          stroke="#E86617"
+          strokeWidth="1.2"
           strokeLinecap="round"
           fill="none"
           opacity="0.16"
