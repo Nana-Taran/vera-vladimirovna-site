@@ -3,7 +3,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import PageNotFound from './lib/PageNotFound';
 
-import Poslugi from './pages/Poslugi';
+import Uslugi from './pages/Uslugi';
 import Yasnovidenie from './pages/Yasnovidenie';
 import Taro from './pages/Taro';
 import Gadanie from './pages/Gadanie';
@@ -11,7 +11,6 @@ import SnyatieNegativa from './pages/SnyatieNegativa';
 import LyubovnayaMagiya from './pages/LyubovnayaMagiya';
 import OnlineKonsultaciya from './pages/OnlineKonsultaciya';
 import OMne from './pages/OMne';
-import Otzyvy from './pages/Otzyvy';
 import FaqPage from './pages/FaqPage';
 import Ierusalim from './pages/Ierusalim';
 import Kontakty from './pages/Kontakty';
@@ -23,7 +22,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/poslugi" element={<Poslugi />} />
+        <Route path="/uslugi" element={<Uslugi />} />
         <Route path="/yasnovidenie" element={<Yasnovidenie />} />
         <Route path="/taro" element={<Taro />} />
         <Route path="/gadanie" element={<Gadanie />} />
@@ -31,7 +30,6 @@ function App() {
         <Route path="/lyubovnaya-magiya" element={<LyubovnayaMagiya />} />
         <Route path="/online-konsultaciya" element={<OnlineKonsultaciya />} />
         <Route path="/o-mne" element={<OMne />} />
-        <Route path="/otzyvy" element={<Otzyvy />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/ierusalim" element={<Ierusalim />} />
         <Route path="/kontakty" element={<Kontakty />} />
