@@ -101,7 +101,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
           >
-            35 ЛЕТ ПРАКТИКИ.
+            Ясновидящая Вера Владимировна — 35 лет практики.
           </motion.h1>
 
           <motion.p
@@ -116,7 +116,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Ответы, которые меняют судьбу.
+            Ответы, которые возвращают ясность.
           </motion.p>
 
           <motion.p
@@ -132,8 +132,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Когда нужен не совет — а настоящий взгляд на ситуацию.
-            Ясновидение, подкреплённое молитвами у Стены Плача в Иерусалиме.
+            Когда не понимаешь что происходит и не знаешь куда двигаться —
+            важен не совет, а настоящий взгляд на ситуацию.
+            Ясновидение, подкреплённое глубокой духовной практикой.
           </motion.p>
 
           <motion.div
@@ -151,7 +152,7 @@ export default function Hero() {
                 letterSpacing: '0.08em',
               }}
             >
-              Написать →
+              Написать в Telegram →
             </a>
             <a
               href="#contacts"
@@ -179,6 +180,23 @@ export default function Hero() {
           >
             ★ 500+ КЛИЕНТОВ &nbsp;·&nbsp; 35 ЛЕТ ПРАКТИКИ &nbsp;·&nbsp; 12 СТРАН
           </motion.div>
+
+          <motion.p
+            className="font-lato"
+            style={{
+              color: 'var(--text-beige)',
+              fontSize: '9px',
+              fontWeight: 300,
+              letterSpacing: '0.04em',
+              marginTop: '6px',
+              opacity: 0.7,
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.7 }}
+            transition={{ duration: 1, delay: 1.4 }}
+          >
+            Первичный разбор ситуации — бесплатно. Стоимость обсуждается индивидуально после диагностики.
+          </motion.p>
         </div>
       </div>
     </section>

@@ -8,8 +8,8 @@ const stats = [
 
 const points = [
   'Работает у Стены Плача в Иерусалиме',
-  'Тысячи клиентов из разных стран',
   'Без запугивания и пустых обещаний',
+  'Клиенты из 12+ стран мира',
   'Полная конфиденциальность',
 ];
 
@@ -48,7 +48,7 @@ export default function About() {
             className="font-montserrat font-semibold text-xs uppercase mb-4"
             style={{ color: 'var(--accent-glow)', letterSpacing: '0.2em' }}
           >
-            ★ ПОЧЕМУ ИМЕННО ВЕРА ВАСИЛЬЕВНА
+            ★ ПОЧЕМУ ИМЕННО ВЕРА ВЛАДИМИРОВНА
           </p>
           <h2
             className="font-bebas leading-none mb-2"
@@ -60,7 +60,7 @@ export default function About() {
             className="font-lobster"
             style={{ color: 'var(--accent)', fontSize: 'clamp(26px, 4vw, 40px)' }}
           >
-            это другой уровень видения.
+            это другой уровень понимания.
           </p>
         </motion.div>
 
