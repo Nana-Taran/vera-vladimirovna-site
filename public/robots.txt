@@ -27,4 +27,4 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-Sitemap: {{SITE_URL}}/sitemap.xml
+Sitemap: https://veravladimirovna.com/sitemap.xml

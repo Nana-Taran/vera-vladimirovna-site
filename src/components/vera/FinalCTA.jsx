@@ -17,7 +17,7 @@ const messengers = [
   {
     label: 'Viber',
     icon: <MessageSquare size={20} />,
-    href: 'viber://chat?number=995558314030',
+    href: 'viber://chat?number=%2B995558314030',
     color: '#7360F2',
   },
 ];
