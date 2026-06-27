@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Услуги', href: '#services' },
-  { label: 'Обо мне', href: '#about' },
-  { label: 'Отзывы', href: '#reviews' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Контакты', href: '#contacts' },
+  { label: 'Главная', to: '/' },
+  { label: 'О мне', to: '/o-mne' },
+  { label: 'Все услуги', to: '/uslugi' },
+  { label: 'FAQ', to: '/faq' },
+  { label: 'Контакты', to: '/kontakty' },
 ];
+
+const TG = 'https://t.me/Vera_vladimerovna';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,31 +34,35 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#hero" className="font-lobster transition-opacity hover:opacity-80" style={{ color: 'var(--accent)', fontSize: '28px' }}>
+          <Link to="/" className="font-lobster transition-opacity hover:opacity-80" style={{ color: 'var(--accent)', fontSize: '28px' }}>
             Вера Владимировна
-          </a>
+          </Link>
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.to}
+                to={link.to}
                 className="font-montserrat text-xs font-semibold uppercase tracking-widest transition-colors hover:opacity-80"
                 style={{ color: 'var(--text-beige)', letterSpacing: '0.15em' }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="#contacts"
+              href={TG}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-montserrat text-xs font-semibold px-4 py-2 rounded transition-all hover:opacity-80"
               style={{ border: '1px solid var(--accent)', color: 'var(--accent)', letterSpacing: '0.1em' }}
             >
               Написать ▾
             </a>
             <a
-              href="#contacts"
+              href={TG}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-montserrat text-xs font-bold px-4 py-2 rounded transition-all hover:opacity-90"
               style={{ background: 'var(--accent)', color: 'var(--bg-deep)', letterSpacing: '0.05em' }}
             >
@@ -83,19 +90,21 @@ export default function Navbar() {
           >
             <div className="px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+                <Link
+                  key={link.to}
+                  to={link.to}
                   onClick={() => setMobileOpen(false)}
                   className="font-montserrat text-sm font-semibold uppercase tracking-widest py-2"
                   style={{ color: 'var(--text-beige)', borderBottom: '1px solid rgba(232,102,23,0.1)' }}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col gap-3 pt-2">
                 <a
-                  href="#contacts"
+                  href={TG}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="font-montserrat text-sm font-bold py-3 text-center rounded"
                   style={{ background: 'var(--accent)', color: 'var(--bg-deep)' }}
