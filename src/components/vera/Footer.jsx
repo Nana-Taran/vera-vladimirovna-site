@@ -12,7 +12,7 @@ const socials = [
   { icon: <Camera size={18} />, href: '#', label: 'Instagram' },
   { icon: <Send size={18} />, href: 'https://t.me/Vera_vladimerovna', label: 'Telegram' },
   { icon: <Phone size={18} />, href: 'https://wa.me/995558314030', label: 'WhatsApp' },
-  { icon: <MessageSquare size={18} />, href: 'viber://chat?number=995558314030', label: 'Viber' },
+  { icon: <MessageSquare size={18} />, href: 'viber://chat?number=%2B995558314030', label: 'Viber' },
   {
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -85,6 +85,20 @@ export default function Footer() {
           <a href="/privacy" className="font-lato text-xs transition-colors hover:opacity-80" style={{ color: 'var(--text-beige)', fontWeight: 300 }}>
             Политика конфиденциальности
           </a>
+        </div>
+        <div className="mt-4 text-center" style={{ borderTop: '1px solid rgba(232,102,23,0.06)', paddingTop: '12px' }}>
+          <p className="font-lato text-xs" style={{ color: 'rgba(200,180,160,0.35)', fontWeight: 300 }}>
+            Сайт разработан агентством{' '}
+            <a
+              href="https://t.me/nana_taran"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-70"
+              style={{ color: 'rgba(200,180,160,0.45)', textDecoration: 'underline', textUnderlineOffset: '2px' }}
+            >
+              NANO · Nana Taran
+            </a>
+          </p>
         </div>
       </div>
     </footer>

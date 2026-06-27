@@ -38,22 +38,28 @@
   <meta name="twitter:description" content="Вера Владимировна — ясновидящая с 35-летним опытом. Работает у Стены Плача в Иерусалиме. Онлайн консультации из любой страны." />
   <meta name="twitter:image" content="https://veravladimirovna.com/images/og/og-image.jpg" />
 
-  <!-- SCHEMA.ORG — JSON-LD -->
+  <!-- SCHEMA.ORG Person — JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Вера Владимировна",
     "jobTitle": "Ясновидящая, таролог, экстрасенс",
-    "description": "Ясновидящая с 35-летним опытом. Работает у Стены Плача в Иерусалиме.",
+    "description": "Ясновидящая с 35-летним опытом. Работает у Стены Плача в Иерусалиме. Онлайн консультации для русскоязычных клиентов из Европы, США, Канады и Израиля.",
     "url": "https://veravladimirovna.com",
     "telephone": "+995558314030",
-    "email": "",
     "image": "https://veravladimirovna.com/images/hero/hero-banner.jpg",
+    "knowsAbout": ["ясновидение", "таро", "гадание", "снятие негатива", "любовная магия", "эзотерика"],
     "sameAs": [
       "https://t.me/Vera_vladimerovna",
       "https://wa.me/995558314030"
     ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["Russian"],
+      "contactOption": "TollFree"
+    },
     "areaServed": [
       {"@type": "Country", "name": "Austria"},
       {"@type": "Country", "name": "Germany"},
@@ -76,12 +82,125 @@
       {"@type": "Country", "name": "Greece"},
       {"@type": "Country", "name": "Australia"}
     ],
-    "availableLanguage": ["Russian", "Ukrainian"],
+    "availableLanguage": ["Russian"],
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       "availableDeliveryMethod": "https://schema.org/OnSitePickup"
     }
+  }
+  </script>
+
+  <!-- SCHEMA.ORG FAQPage — JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Как проходит онлайн-консультация?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Консультация проходит через удобный для вас мессенджер — Telegram, WhatsApp или Viber. Вы описываете ситуацию, Вера Владимировна смотрит через ясновидение или карты и даёт развёрнутый ответ. Всё происходит конфиденциально."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько стоит консультация?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Стоимость зависит от выбранного формата и глубины работы. Для уточнения цены напишите напрямую — Вера Владимировна сначала посмотрит вашу ситуацию, а затем предложит подходящий формат."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Как долго ждать результата?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Это зависит от характера вашего запроса. Ответ на конкретный вопрос — в течение сессии. Более глубокая работа — от нескольких дней до нескольких недель. Вера Владимировна всегда честно обозначает реалистичные ожидания."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Работаете с клиентами из других стран?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. Вера Владимировна работает с клиентами из 12+ стран. Расстояние не имеет значения — работа ведётся онлайн через мессенджеры."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Это конфиденциально?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Абсолютно. Всё, что вы рассказываете на консультации, остаётся строго между вами и Верой Владимировной. Никаких публичных отзывов без вашего согласия, никаких третьих лиц."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "С чего начать?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Просто напишите в любой удобный мессенджер — Telegram, WhatsApp или Viber. Опишите в двух словах что вас беспокоит. Вера Владимировна ответит и предложит первый шаг."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- SCHEMA.ORG AggregateRating + Reviews — JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Вера Владимировна — Ясновидящая онлайн",
+    "url": "https://veravladimirovna.com",
+    "telephone": "+995558314030",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Анастасия К."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "datePublished": "2026-03-15",
+        "reviewBody": "Вера Владимировна увидела ситуацию так точно, как будто знала меня всю жизнь. После сеанса всё встало на своё место. Отношения наладились, а страхи ушли. Безмерно благодарна."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Марина В."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "datePublished": "2026-04-02",
+        "reviewBody": "Обратилась по вопросу работы — не могла понять, почему всё рушится. Вера увидела причину и дала чёткие рекомендации. Через месяц ситуация изменилась кардинально."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Елена М."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "datePublished": "2026-02-20",
+        "reviewBody": "Скептически относилась к подобным вещам, но попробовала. Была поражена точностью. Описала события из прошлого, которые я никому не рассказывала. Рекомендую всем."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Дмитрий С."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "datePublished": "2026-05-10",
+        "reviewBody": "Обращался по сложной ситуации в семье. Вера Владимировна дала очень точный взгляд и помогла найти путь. Работает аккуратно, без запугивания. Настоящий профессионал."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Ольга Ф."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "datePublished": "2026-06-01",
+        "reviewBody": "Стена Плача — это особенное место, и то что Вера работает там, придаёт особый вес её работе. Ощутила результат в течение двух недель. Очень рекомендую."
+      }
+    ]
   }
   </script>
 
@@ -98,6 +217,34 @@
   <link rel="stylesheet" href="/src/index.css" />
 </head>
 <body>
+  <!-- AI-SUMMARY: статичный блок для AI-поисковиков (GPT, Claude, Perplexity), не видим пользователю -->
+  <noscript>
+    <h1>Вера Владимировна — Ясновидящая онлайн</h1>
+    <p>Вера Владимировна — ясновидящая, таролог и экстрасенс с 35-летним опытом. Работает у Стены Плача в Иерусалиме. Проводит онлайн-консультации для русскоязычных клиентов из Европы, США, Канады, Израиля и других стран. Специализация: ясновидение, таро, гадание, снятие негатива, любовная магия. Связь через Telegram, WhatsApp или Viber.</p>
+    <h2>Услуги</h2>
+    <ul>
+      <li>Ясновидение — прямой взгляд на ситуацию</li>
+      <li>Таро — расклад на вопрос и будущее</li>
+      <li>Гадание — ответ на конкретный вопрос</li>
+      <li>Снятие негатива — очищение от порчи и сглаза</li>
+      <li>Любовная магия — работа со сложными ситуациями</li>
+      <li>Онлайн консультация — работа через мессенджер</li>
+    </ul>
+    <h2>Часто задаваемые вопросы</h2>
+    <dl>
+      <dt>Как проходит онлайн-консультация?</dt>
+      <dd>Консультация проходит через удобный для вас мессенджер — Telegram, WhatsApp или Viber. Вы описываете ситуацию, Вера Владимировна смотрит через ясновидение или карты и даёт развёрнутый ответ. Всё происходит конфиденциально.</dd>
+      <dt>Работаете с клиентами из других стран?</dt>
+      <dd>Да. Вера Владимировна работает с клиентами из 12+ стран. Расстояние не имеет значения.</dd>
+      <dt>Это конфиденциально?</dt>
+      <dd>Абсолютно. Всё, что вы рассказываете на консультации, остаётся строго между вами и Верой Владимировной.</dd>
+      <dt>С чего начать?</dt>
+      <dd>Напишите в любой удобный мессенджер — Telegram: https://t.me/Vera_vladimerovna</dd>
+    </dl>
+    <h2>Контакты</h2>
+    <p>Telegram: https://t.me/Vera_vladimerovna | WhatsApp: +995558314030 | Сайт: https://veravladimirovna.com</p>
+  </noscript>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
