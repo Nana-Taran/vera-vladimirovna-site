@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/vera/Navbar';
 import Hero from '@/components/vera/Hero';
 import IconStrip from '@/components/vera/IconStrip';
@@ -17,6 +18,9 @@ import FAB from '@/components/vera/FAB';
 export default function Home() {
   return (
     <div style={{ background: 'var(--bg-deep)', minHeight: '100vh' }}>
+      <Helmet>
+        <link rel="canonical" href="https://veravladimirovna.com/" />
+      </Helmet>
       <Navbar />
       <Hero />
       <IconStrip />

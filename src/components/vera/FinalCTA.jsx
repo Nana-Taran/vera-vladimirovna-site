@@ -17,7 +17,7 @@ const messengers = [
   {
     label: 'Viber',
     icon: <MessageSquare size={20} />,
-    href: 'viber://chat?number=995558314030',
+    href: 'viber://chat?number=%2B995558314030',
     color: '#7360F2',
   },
 ];
@@ -50,7 +50,7 @@ export default function FinalCTA() {
             className="font-bebas leading-none mb-3"
             style={{ color: 'var(--text-white)', fontSize: 'clamp(44px, 8vw, 72px)' }}
           >
-            ГОТОВЫ ПОЛУЧИТЬ ОТВЕТ?
+            ГОТОВЫ ПОЛУЧИТЬ ЯСНОСТЬ?
           </h2>
           <p
             className="font-lobster mb-12"
