@@ -4,3 +4,5 @@ dist
 *.local
 .env
 .env.*
+public/images/video/vera-ierusalim.mp4
+public/images/video/vera-vladimirovna.MP4
