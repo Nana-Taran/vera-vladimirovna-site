@@ -85,30 +85,39 @@ export default function Hero() {
         }}
       />
 
+      {/* Navbar buffer overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(9,6,4,0.97) 0%, rgba(9,6,4,0.92) 8%, rgba(9,6,4,0.6) 18%, rgba(9,6,4,0.15) 28%, transparent 38%)',
+        }}
+      />
+
       {/* Content */}
       <div
-        className="relative z-10 flex flex-col justify-start sm:justify-end px-5 sm:px-10 lg:px-20 pt-[110vw] sm:pt-0 pb-4 sm:pb-0"
+        id="hero-content"
+        className="relative z-10 flex flex-col justify-start sm:justify-end px-5 sm:px-10 lg:px-20 pt-[110vw] sm:pt-0 pb-4 sm:pb-0 lg:pb-0"
         style={{ height: '100svh' }}
       >
-        <div className="w-full sm:max-w-lg">
+        <div className="w-full sm:max-w-lg lg:max-w-2xl" style={{ paddingTop: '12px' }}>
           <motion.h1
             className="font-bebas leading-none mb-0 hero-h1"
             style={{
               color: 'var(--text-white)',
-              fontSize: 'clamp(22px, 5.5vw, 38.5px)',
+              fontSize: 'clamp(28px, 3.5vw, 62px)',
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
           >
-            Ясновидящая Вера Владимировна — 35 лет практики.
+            35 лет практики.
           </motion.h1>
 
           <motion.p
             className="font-lobster mb-1 hero-subtitle"
             style={{
               color: 'var(--accent)',
-              fontSize: 'clamp(14px, 3.8vw, 25px)',
+              fontSize: 'clamp(16px, 2.2vw, 36px)',
               lineHeight: 1.2,
               letterSpacing: '0.04em',
             }}
@@ -123,9 +132,9 @@ export default function Hero() {
             className="font-lato mb-2 leading-relaxed hero-body"
             style={{
               color: 'var(--text-beige)',
-              fontSize: 'clamp(11px, 2.8vw, 12px)',
+              fontSize: 'clamp(13px, 1.1vw, 17px)',
               fontWeight: 300,
-              maxWidth: '400px',
+              maxWidth: '500px',
               letterSpacing: '0.025em',
             }}
             initial={{ opacity: 0, y: 20 }}
@@ -178,25 +187,9 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            ★ 500+ КЛИЕНТОВ &nbsp;·&nbsp; 35 ЛЕТ ПРАКТИКИ &nbsp;·&nbsp; 12 СТРАН
+            ★ 1500+ КЛИЕНТОВ &nbsp;·&nbsp; 35 ЛЕТ ПРАКТИКИ &nbsp;·&nbsp; 12 СТРАН
           </motion.div>
 
-          <motion.p
-            className="font-lato"
-            style={{
-              color: 'var(--text-beige)',
-              fontSize: '9px',
-              fontWeight: 300,
-              letterSpacing: '0.04em',
-              marginTop: '6px',
-              opacity: 0.7,
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.7 }}
-            transition={{ duration: 1, delay: 1.4 }}
-          >
-            Первичный разбор ситуации — бесплатно. Стоимость обсуждается индивидуально после диагностики.
-          </motion.p>
         </div>
       </div>
     </section>

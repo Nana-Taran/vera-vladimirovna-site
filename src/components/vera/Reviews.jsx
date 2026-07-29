@@ -4,71 +4,66 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const reviews = [
   {
-    platform: 'Telegram',
-    headerColor: '#229ED9',
-    name: 'Анастасия К.',
-    text: 'Вера Владимировна увидела ситуацию так точно, как будто знала меня всю жизнь. После сеанса всё встало на своё место. Отношения наладились, а страхи ушли. Безмерно благодарна.',
-    date: '15 марта 2026',
-    stars: 5,
+    id: 'anna',
+    name: 'Анна',
+    location: 'Германия, Дюссельдорф',
+    images: ['/images/otzivi/anna-germany-1.png', '/images/otzivi/anna-germany-2.png'],
   },
   {
-    platform: 'WhatsApp',
-    headerColor: '#25D366',
-    name: 'Марина В.',
-    text: 'Обратилась по вопросу работы — не могла понять, почему всё рушится. Вера увидела причину и дала чёткие рекомендации. Через месяц ситуация изменилась кардинально.',
-    date: '2 апреля 2026',
-    stars: 5,
+    id: 'vera',
+    name: 'Вера',
+    location: 'Италия, Рим',
+    images: ['/images/otzivi/vera-italy.png'],
   },
   {
-    platform: 'Viber',
-    headerColor: '#7360F2',
-    name: 'Елена М.',
-    text: 'Скептически относилась к подобным вещам, но попробовала. Была поражена точностью. Описала события из прошлого, которые я никому не рассказывала. Рекомендую всем.',
-    date: '20 февраля 2026',
-    stars: 5,
+    id: 'maria',
+    name: 'Мария',
+    location: 'Россия, Краснодар',
+    images: ['/images/otzivi/maria-russia.png'],
   },
   {
-    platform: 'Telegram',
-    headerColor: '#229ED9',
-    name: 'Дмитрий С.',
-    text: 'Обращался по сложной ситуации в семье. Вера Владимировна дала очень точный взгляд и помогла найти путь. Работает аккуратно, без запугивания. Настоящий профессионал.',
-    date: '10 мая 2026',
-    stars: 5,
+    id: 'sergey',
+    name: 'Сергей',
+    location: 'Россия, Краснодар',
+    images: ['/images/otzivi/sergey-russia.png'],
   },
-  {
-    platform: 'WhatsApp',
-    headerColor: '#25D366',
-    name: 'Ольга Ф.',
-    text: 'Стена Плача — это особенное место, и то что Вера работает там, придаёт особый вес её работе. Ощутила результат в течение двух недель. Очень рекомендую.',
-    date: '1 июня 2026',
-    stars: 5,
-  },
+  // Следующие 2 отзыва добавить позже:
+  { id: 'soon1', name: '', location: '', images: [] },
+  { id: 'soon2', name: '', location: '', images: [] },
 ];
 
+const VISIBLE = 5; // телефонов в ряд на десктопе
+
 export default function Reviews() {
-  const [current, setCurrent] = useState(0);
+  const [start, setStart] = useState(0);
   const total = reviews.length;
 
-  const prev = () => setCurrent((c) => (c - 1 + total) % total);
-  const next = () => setCurrent((c) => (c + 1) % total);
+  const prev = () => setStart((s) => (s - 1 + total) % total);
+  const next = () => setStart((s) => (s + 1) % total);
 
-  const getVisible = () => {
-    const indices = [];
-    for (let i = -1; i <= 1; i++) {
-      indices.push((current + i + total) % total);
-    }
-    return indices;
-  };
+  const visibleItems = Array.from({ length: VISIBLE }, (_, i) => reviews[(start + i) % total]);
 
   return (
     <section
       id="reviews"
-      className="relative py-20 md:py-28 lg:py-36 px-4"
-      style={{ background: 'var(--bg-dark)' }}
+      className="relative overflow-hidden py-20 md:py-28 px-4"
+      style={{ background: 'var(--text-white)' }}
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Лёгкое оранжевое свечение справа — как в About */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '20%', right: '5%',
+          width: '400px', height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(ellipse at center, rgba(232,102,23,0.1) 0%, transparent 70%)',
+          filter: 'blur(50px)',
+          zIndex: 0,
+        }}
+      />
+      <div className="max-w-[1400px] mx-auto relative z-10">
         <motion.div
-          className="mb-14"
+          className="mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -76,13 +71,13 @@ export default function Reviews() {
         >
           <p
             className="font-montserrat font-semibold text-xs uppercase mb-4"
-            style={{ color: 'var(--accent)', letterSpacing: '0.2em' }}
+            style={{ color: 'var(--accent-glow)', letterSpacing: '0.2em' }}
           >
             ★ ЧТО ГОВОРЯТ КЛИЕНТЫ
           </p>
           <h2
             className="font-bebas leading-none mb-1"
-            style={{ color: 'var(--text-white)', fontSize: 'clamp(38px, 6vw, 58px)' }}
+            style={{ color: '#090604', fontSize: 'clamp(38px, 6vw, 58px)' }}
           >
             РЕАЛЬНЫЕ КЛИЕНТЫ.
           </h2>
@@ -94,99 +89,186 @@ export default function Reviews() {
           </p>
         </motion.div>
 
-        <div className="relative">
-          <div className="hidden md:grid grid-cols-3 gap-5">
-            {getVisible().map((idx, pos) => (
-              <ReviewCard key={idx} review={reviews[idx]} isCenter={pos === 1} />
+        {/* Desktop: 5 телефонов в ряд */}
+        <div className="hidden md:grid grid-cols-5 gap-3">
+          {visibleItems.map((review, pos) => (
+            <PhoneMockup key={review.id + pos} review={review} isCenter={pos === 1 || pos === 2} />
+          ))}
+        </div>
+
+        {/* Mobile: 2 телефона рядом */}
+        <div className="md:hidden grid grid-cols-2 gap-3">
+          {[reviews[start % total], reviews[(start + 1) % total]].map((review, i) => (
+            <PhoneMockup key={review.id + i} review={review} isCenter={true} />
+          ))}
+        </div>
+
+        {/* Навигация */}
+        <div className="flex items-center justify-center gap-4 mt-10">
+          <button
+            onClick={prev}
+            className="flex items-center justify-center w-10 h-10 rounded-full transition-all hover:opacity-80"
+            style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
+            aria-label="Назад"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <div className="flex gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setStart(i)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{
+                  background: i >= start && i < start + VISIBLE
+                    ? 'var(--accent)'
+                    : 'rgba(232,102,23,0.3)',
+                }}
+              />
             ))}
           </div>
-          <div className="md:hidden">
-            <ReviewCard review={reviews[current]} isCenter={true} />
-          </div>
-          <div className="flex items-center justify-center gap-4 mt-10">
-            <button
-              onClick={prev}
-              className="flex items-center justify-center w-10 h-10 rounded-full transition-all hover:opacity-80"
-              style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
-              aria-label="Назад"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <div className="flex gap-2">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className="w-2 h-2 rounded-full transition-all"
-                  style={{
-                    background: i === current ? 'var(--accent)' : 'rgba(232,102,23,0.3)',
-                  }}
-                />
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="flex items-center justify-center w-10 h-10 rounded-full transition-all hover:opacity-80"
-              style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
-              aria-label="Вперёд"
-            >
-              <ChevronRight size={18} />
-            </button>
-          </div>
+          <button
+            onClick={next}
+            className="flex items-center justify-center w-10 h-10 rounded-full transition-all hover:opacity-80"
+            style={{ border: '1px solid var(--accent)', color: 'var(--accent)' }}
+            aria-label="Вперёд"
+          >
+            <ChevronRight size={18} />
+          </button>
         </div>
       </div>
     </section>
   );
 }
 
-function ReviewCard({ review, isCenter }) {
+function PhoneMockup({ review, isCenter }) {
+  const [imgIndex, setImgIndex] = useState(0);
+  const hasMultiple = review.images.length > 1;
+  const isEmpty = review.images.length === 0;
+
   return (
     <motion.div
-      className="rounded-xl overflow-hidden transition-all duration-300"
+      className="flex flex-col items-center w-full"
       style={{
-        border: `1px solid ${isCenter ? 'rgba(232,102,23,0.5)' : 'rgba(232,102,23,0.15)'}`,
-        opacity: isCenter ? 1 : 0.65,
-        transform: isCenter ? 'scale(1)' : 'scale(0.97)',
+        opacity: isCenter ? 1 : 0.7,
+        transform: isCenter ? 'scale(1)' : 'scale(0.96)',
+        transition: 'all 0.3s',
       }}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: isCenter ? 1 : 0.65, y: 0 }}
+      whileInView={{ opacity: isCenter ? 1 : 0.7, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
     >
-      <div
-        className="px-4 py-3 flex items-center gap-3"
-        style={{ background: review.headerColor }}
-      >
-        <div
-          className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
-          style={{ background: 'rgba(255,255,255,0.2)' }}
-        >
-          {review.name[0]}
-        </div>
-        <div>
-          <div className="text-white font-semibold text-sm font-montserrat">{review.name}</div>
-          <div className="text-white text-xs opacity-80">{review.platform}</div>
+      {/* Корпус телефона */}
+      <div style={{
+        width: 'min(180px, 100%)',
+        background: '#1c1c1e',
+        borderRadius: '32px',
+        padding: '8px',
+        boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.55)',
+        position: 'relative',
+      }}>
+        {/* Кнопки слева */}
+        {[60, 92, 130].map((top, i) => (
+          <div key={i} style={{
+            position: 'absolute', left: '-2.5px', top,
+            width: '2.5px', height: i === 0 ? 22 : 34,
+            background: '#3a3a3c', borderRadius: '2px 0 0 2px',
+          }} />
+        ))}
+        {/* Кнопка справа */}
+        <div style={{
+          position: 'absolute', right: '-2.5px', top: 90,
+          width: '2.5px', height: 50,
+          background: '#3a3a3c', borderRadius: '0 2px 2px 0',
+        }} />
+
+        {/* Экран */}
+        <div style={{
+          background: '#000',
+          borderRadius: '26px',
+          overflow: 'hidden',
+          position: 'relative',
+        }}>
+          {/* Dynamic Island */}
+          <div style={{
+            position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)',
+            width: '60px', height: '18px',
+            background: '#1c1c1e', borderRadius: '10px', zIndex: 10,
+          }} />
+
+          {/* Контент экрана */}
+          {isEmpty ? (
+            <div style={{
+              height: '360px',
+              display: 'flex', flexDirection: 'column',
+              alignItems: 'center', justifyContent: 'center',
+              background: '#111',
+            }}>
+              <div style={{ fontSize: '28px', marginBottom: '8px', opacity: 0.3 }}>💬</div>
+              <div style={{
+                color: 'rgba(255,255,255,0.2)',
+                fontSize: '11px', fontFamily: 'Montserrat, sans-serif',
+                letterSpacing: '0.1em', textAlign: 'center',
+              }}>
+                СКОРО
+              </div>
+            </div>
+          ) : (
+            <img
+              src={review.images[imgIndex]}
+              alt={`Отзыв — ${review.name}`}
+              style={{
+                width: '100%',
+                height: '360px',
+                objectFit: 'cover',
+                objectPosition: 'top',
+                display: 'block',
+              }}
+            />
+          )}
+
+          {/* Точки для Анны */}
+          {hasMultiple && (
+            <div style={{
+              position: 'absolute', bottom: '22px',
+              left: 0, right: 0,
+              display: 'flex', justifyContent: 'center', gap: '5px',
+            }}>
+              {review.images.map((_, i) => (
+                <button key={i} onClick={() => setImgIndex(i)} style={{
+                  width: '6px', height: '6px', borderRadius: '50%',
+                  background: i === imgIndex ? 'var(--accent)' : 'rgba(255,255,255,0.35)',
+                  border: 'none', cursor: 'pointer', padding: 0,
+                }} />
+              ))}
+            </div>
+          )}
+
+          {/* Home bar */}
+          <div style={{
+            height: '22px', background: '#000',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <div style={{
+              width: '70px', height: '3px',
+              background: 'rgba(255,255,255,0.2)', borderRadius: '2px',
+            }} />
+          </div>
         </div>
       </div>
-      <div className="p-5" style={{ background: 'var(--bg-dark)' }}>
-        <div className="flex gap-0.5 mb-3">
-          {Array.from({ length: review.stars }).map((_, i) => (
-            <span key={i} style={{ color: 'var(--accent)', fontSize: '14px' }}>★</span>
-          ))}
+
+      {/* Подпись */}
+      {!isEmpty && (
+        <div className="mt-3 text-center">
+          <div className="font-montserrat font-semibold text-xs" style={{ color: 'var(--text-white)' }}>
+            {review.name}
+          </div>
+          <div className="font-lato text-xs mt-0.5" style={{ color: 'var(--text-beige)', fontWeight: 300 }}>
+            {review.location}
+          </div>
         </div>
-        <p
-          className="font-lato text-sm leading-relaxed mb-4"
-          style={{ color: 'var(--text-beige)', fontWeight: 300 }}
-        >
-          {review.text}
-        </p>
-        <p
-          className="font-montserrat text-xs"
-          style={{ color: 'rgba(217,150,112,0.5)', letterSpacing: '0.05em' }}
-        >
-          {review.date}
-        </p>
-      </div>
+      )}
     </motion.div>
   );
 }

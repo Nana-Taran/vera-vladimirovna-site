@@ -33,7 +33,7 @@ export default function Footer() {
         borderTop: '1px solid rgba(232,102,23,0.15)',
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="font-lobster text-2xl mb-3" style={{ color: 'var(--accent)' }}>

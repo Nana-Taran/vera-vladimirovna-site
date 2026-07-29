@@ -122,7 +122,7 @@ export default function WhenToReach() {
         Вера
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

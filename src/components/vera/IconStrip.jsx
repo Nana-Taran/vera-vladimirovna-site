@@ -36,7 +36,7 @@ export default function IconStrip() {
       style={{ marginTop: '0' }}
     >
       <motion.div
-        className="max-w-4xl mx-auto rounded-xl px-6 py-6 md:py-8"
+        className="max-w-[1400px] mx-auto rounded-xl px-6 py-6 md:py-8"
         style={{ background: 'var(--bg-dark)' }}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

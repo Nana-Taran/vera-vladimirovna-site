@@ -71,7 +71,7 @@ export default function Kontakty() {
 
       {/* H1 + текст */}
       <section className="pt-32 pb-16 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export default function Kontakty() {
 
       {/* Текст + кнопки контактов */}
       <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +162,7 @@ export default function Kontakty() {
 
       {/* FAQ */}
       <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}

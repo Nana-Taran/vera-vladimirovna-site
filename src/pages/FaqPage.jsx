@@ -80,7 +80,7 @@ export default function FaqPage() {
 
       {/* H1 + AI-резюме */}
       <section className="pt-32 pb-16 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,10 +96,10 @@ export default function FaqPage() {
               className="font-bebas leading-none mb-8"
               style={{ color: 'var(--text-white)', fontSize: 'clamp(34px, 5vw, 58px)' }}
             >
-              ВОПРОСЫ О РАБОТЕ<br />ЯСНОВИДЯЩЕЙ ВЕРЫ ВЛАДИМИРОВНЫ
+              ВОПРОСЫ О РАБОТЕ<br />ВЕРЫ ВЛАДИМИРОВНЫ
             </h1>
             <p
-              className="font-lato text-base leading-relaxed max-w-2xl"
+              className="font-lato text-base leading-relaxed max-w-[700px]"
               style={{ color: 'var(--text-beige)', fontWeight: 300 }}
             >
               Ответы на самые частые вопросы о работе Веры Владимировны — ясновидящей с 35-летним опытом. Как проходит онлайн-консультация, сколько стоит, насколько точно, что делать если страшно — честно и без общих слов. Работает с клиентами из 12+ стран, только через мессенджеры, полная конфиденциальность.
@@ -109,14 +109,29 @@ export default function FaqPage() {
       </section>
 
       {/* 12 вопросов */}
-      <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
-          <div>
+      <section className="py-16 md:py-24 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
+        {/* Glow 1 */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: `radial-gradient(ellipse 130% 90% at 88% 100%,
+            rgba(195,72,8,0.55) 0%, rgba(215,88,12,0.35) 20%,
+            rgba(230,100,20,0.15) 42%, rgba(232,102,23,0.06) 62%, transparent 78%)`,
+          zIndex: 0,
+        }} />
+        {/* Glow 2 */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: `radial-gradient(ellipse 95% 80% at 8% 5%,
+            rgba(210,85,10,0.22) 0%, rgba(225,100,18,0.10) 35%,
+            transparent 65%)`,
+          zIndex: 0,
+        }} />
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
                 className="py-1"
-                style={{ borderBottom: '1px solid rgba(232,102,23,0.2)' }}
+                style={{ borderBottom: '1px solid rgba(168,67,14,0.2)' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -129,7 +144,7 @@ export default function FaqPage() {
                 >
                   <span
                     className="font-lato text-base leading-snug flex-1"
-                    style={{ color: 'var(--text-white)', fontWeight: 400 }}
+                    style={{ color: '#2d1507', fontWeight: 500 }}
                   >
                     {faq.q}
                   </span>
@@ -151,7 +166,7 @@ export default function FaqPage() {
                     >
                       <p
                         className="font-lato text-sm leading-relaxed pb-5"
-                        style={{ color: 'var(--text-beige)', fontWeight: 400 }}
+                        style={{ color: '#5a3520', fontWeight: 400 }}
                       >
                         {faq.a}
                       </p>
@@ -165,6 +180,7 @@ export default function FaqPage() {
       </section>
 
       {/* CTA */}
+
       <section className="relative py-24 md:py-32 px-4 text-center overflow-hidden" style={{ background: 'var(--bg-deep)' }}>
         <div
           className="absolute inset-0 pointer-events-none"
@@ -177,7 +193,7 @@ export default function FaqPage() {
           style={{ background: 'var(--accent)' }}
         />
         <motion.div
-          className="max-w-2xl mx-auto relative z-10"
+          className="max-w-[700px] mx-auto relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
