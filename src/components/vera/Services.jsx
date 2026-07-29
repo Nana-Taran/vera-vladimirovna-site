@@ -41,7 +41,7 @@ export default function Services() {
       className="relative py-20 md:py-28 lg:py-36 px-4"
       style={{ background: 'var(--bg-dark)' }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <motion.div
           className="mb-14"
           initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
@@ -67,16 +67,22 @@ export default function Services() {
           {services.map((s, i) => (
             <motion.div
               key={i}
-              className="group p-6 md:p-8 rounded-lg transition-all duration-300"
+              className="group p-6 md:p-8 rounded-lg"
               style={{
                 background: 'var(--bg-deep)',
                 border: '1px solid rgba(232,102,23,0.2)',
+                boxShadow: '0 16px 48px rgba(0,0,0,0.6), 0 6px 16px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)',
               }}
               initial={{ opacity: 0, y: 40, filter: 'blur(10px)', scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              whileHover={{ borderColor: 'rgba(232,102,23,0.6)', transition: { duration: 0.2 } }}
+              whileHover={{
+                y: -8,
+                borderColor: 'rgba(232,102,23,0.6)',
+                boxShadow: '0 32px 72px rgba(0,0,0,0.7), 0 12px 28px rgba(0,0,0,0.45)',
+                transition: { duration: 0.2 },
+              }}
             >
               <div
                 className="mb-5 transition-all duration-300 group-hover:scale-110"

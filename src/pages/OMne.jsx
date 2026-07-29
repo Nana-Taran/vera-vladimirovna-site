@@ -6,13 +6,14 @@ import Navbar from '@/components/vera/Navbar';
 import Footer from '@/components/vera/Footer';
 
 const bio = [
-  'Я начала практиковать более 35 лет назад — в то время, когда это не было ни модно, ни понятно большинству людей вокруг. Дар видения проявился у меня рано, и я выбрала не спрятать его, а развивать — осознанно, ответственно, с пониманием того, что это накладывает обязательства перед людьми.',
-  'За эти годы через меня прошли сотни ситуаций. Женщины, которые не знали, уходить из отношений или оставаться. Люди на перекрёстке — сменить жизнь или держаться за то, что есть. Те, кто чувствовал, что что-то мешает, но не мог понять что. И те, кто просто хотел знать: как всё сложится.',
-  'Я работаю с ясновидением, картами Таро и традиционными практиками гадания. Но главный инструмент — это дар, который я несу в себе и который с годами становится точнее, а не тупее.',
-  'Особое место в моей жизни занимает Иерусалим. Я регулярно бываю у Стены Плача и веду там молитвенную практику — за своих клиентов, за их ситуации. Для меня это не красивая история для сайта. Это живая часть моего пути, которая началась много лет назад и продолжается до сих пор.',
-  'Я работаю онлайн — из любой точки мира. Мои клиенты живут в Германии, Израиле, Австрии, Чехии, США, Нидерландах и других странах. Русскоязычная диаспора — это люди, которые часто оказываются один на один со своими ситуациями: рядом нет привычного окружения, нет человека, которому можно полностью довериться. Я понимаю это — и именно поэтому работаю так, чтобы каждый уходил с ощущением, что его услышали и увидели.',
-  'Я не пугаю. Не обещаю невозможного. Не навязываю работу, которая не нужна. Если вижу что-то тревожное — говорю об этом прямо, но с уважением. Если вижу потенциал — говорю о нём. Если ситуация требует того, чего я не могу дать — честно об этом скажу.',
-  'Вот и весь принцип. Напишите — и увидите сами.',
+  'Я практикую более 35 лет.',
+  'Мой дар ясновидения проявился ещё в молодости, и я решила не скрывать его, а развивать — осознанно, ответственно и с пониманием того, насколько важно бережно относиться к чужим судьбам.',
+  'За годы практики ко мне обращались люди с самыми разными вопросами: отношения и расставания, сложный выбор, повторяющиеся неудачи, тревожные ощущения, непонятные перемены и желание узнать, к чему ведёт ситуация.',
+  'В работе я использую потомственное ясновидение, карты Таро и традиционные практики гадания. Но главным инструментом остаётся мой дар — способность видеть причины происходящего, скрытые обстоятельства и возможное развитие событий.',
+  'Особое место в моей жизни занимает Иерусалим. Я регулярно бываю у Стены Плача и провожу там молитвенную практику за клиентов и их ситуации. Для меня это не красивый образ для сайта, а живая часть моего духовного пути.',
+  'Я консультирую онлайн и работаю с русскоязычными клиентами из Германии, Израиля, Австрии, Чехии, США, Нидерландов и других стран. Расстояние не мешает внимательно рассмотреть ситуацию, услышать человека и дать понятный, честный ответ.',
+  'Мой принцип прост: не запугивать, не обещать невозможного и не навязывать ненужную работу. Если вижу проблему — говорю прямо, но бережно. Если вижу перспективу — объясняю, на что можно опереться. Если не могу помочь — честно скажу об этом.',
+  'Напишите мне, чтобы получить личный разбор ситуации и понять, что происходит на самом деле.',
 ];
 
 const principles = [
@@ -70,7 +71,7 @@ export default function OMne() {
 
       {/* H1 */}
       <section className="pt-32 pb-16 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +87,7 @@ export default function OMne() {
               className="font-bebas leading-none"
               style={{ color: 'var(--text-white)', fontSize: 'clamp(34px, 5vw, 58px)' }}
             >
-              ВЕРА ВЛАДИМИРОВНА — ЯСНОВИДЯЩАЯ:<br />
+              ВЕРА ВЛАДИМИРОВНА —<br />
               КТО Я И КАК РАБОТАЮ
             </h1>
           </motion.div>
@@ -94,81 +95,155 @@ export default function OMne() {
       </section>
 
       {/* Биография */}
-      <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
-          <motion.div
-            className="space-y-5"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            {bio.map((para, i) => (
-              <p
-                key={i}
-                className="font-lato text-base leading-relaxed"
-                style={{ color: 'var(--text-beige)', fontWeight: 300 }}
-              >
-                {para}
-              </p>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <section className="py-16 md:py-20 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
+        {/* Glow 1 */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: `radial-gradient(ellipse 130% 90% at 88% 100%,
+            rgba(195,72,8,0.55) 0%, rgba(215,88,12,0.35) 20%,
+            rgba(230,100,20,0.15) 42%, rgba(232,102,23,0.06) 62%, transparent 78%)`,
+          zIndex: 0,
+        }} />
+        {/* Glow 2 */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: `radial-gradient(ellipse 80% 70% at 5% 5%,
+            rgba(210,85,10,0.18) 0%, rgba(225,100,18,0.08) 40%, transparent 65%)`,
+          zIndex: 0,
+        }} />
 
-      {/* Принципы работы */}
-      <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <p
-              className="font-montserrat font-semibold text-xs uppercase mb-4"
-              style={{ color: 'var(--accent)', letterSpacing: '0.2em' }}
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-12" style={{ alignItems: 'stretch' }}>
+
+            {/* Текст в рамке — 70% */}
+            <motion.div
+              style={{ flex: '0 0 70%', maxWidth: '70%', display: 'flex' }}
+              className="w-full max-lg:!flex-none max-lg:!max-w-full"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
             >
-              ★ МОИ ПРИНЦИПЫ РАБОТЫ
-            </p>
-            <h2
-              className="font-bebas leading-none mb-10"
-              style={{ color: 'var(--text-white)', fontSize: 'clamp(32px, 5vw, 52px)' }}
+              <div style={{
+                width: '100%',
+                border: '2.5px solid var(--accent)',
+                borderRadius: '18px',
+                padding: '40px 44px',
+                background: 'var(--bg-deep)',
+                boxShadow: '0 8px 40px rgba(168,67,14,0.25), 0 2px 8px rgba(0,0,0,0.3)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                position: 'relative',
+                overflow: 'hidden',
+              }}>
+                {/* Оранжевое свечение сверху */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-60px', left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '80%', height: '260px',
+                  background: 'radial-gradient(ellipse at 50% 0%, rgba(232,102,23,0.38) 0%, rgba(200,70,10,0.18) 40%, transparent 70%)',
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                }} />
+                {/* Оранжевое свечение снизу */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '-60px', left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '80%', height: '260px',
+                  background: 'radial-gradient(ellipse at 50% 100%, rgba(232,102,23,0.38) 0%, rgba(200,70,10,0.18) 40%, transparent 70%)',
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                }} />
+
+                {bio.map((para, i) => {
+                  const isFirst = i === 0;
+                  const isLast = i === bio.length - 1;
+                  if (isFirst || isLast) {
+                    return (
+                      <p
+                        key={i}
+                        className="font-lobster"
+                        style={{
+                          fontSize: 'clamp(20px, 1.8vw, 28px)',
+                          color: 'var(--accent)',
+                          lineHeight: 1.35,
+                          marginBottom: isFirst ? '0.5rem' : 0,
+                          marginTop: isLast ? '0.8rem' : 0,
+                          position: 'relative', zIndex: 1,
+                        }}
+                      >
+                        {para}
+                      </p>
+                    );
+                  }
+                  return (
+                    <p
+                      key={i}
+                      className="font-lato leading-relaxed"
+                      style={{
+                        fontSize: '17px',
+                        color: 'var(--text-white)',
+                        fontWeight: 300,
+                        marginBottom: i < bio.length - 2 ? '1.2rem' : 0,
+                        position: 'relative', zIndex: 1,
+                      }}
+                    >
+                      {para}
+                    </p>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Видео 9:16 — 30%, высота определяется своим aspect-ratio */}
+            <motion.div
+              style={{ flex: '0 0 30%', maxWidth: '30%' }}
+              className="w-full max-lg:!flex-none max-lg:!max-w-[280px] max-lg:mx-auto"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
             >
-              КАК Я РАБОТАЮ.
-            </h2>
-            <ul className="space-y-5">
-              {principles.map((principle, i) => (
-                <motion.li
-                  key={i}
-                  className="flex items-start gap-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                >
-                  <span
-                    className="flex-shrink-0 mt-1 text-base"
-                    style={{ color: 'var(--accent)' }}
-                  >
-                    ✦
-                  </span>
-                  <span
-                    className="font-lato text-base leading-relaxed"
-                    style={{ color: 'var(--text-beige)', fontWeight: 300 }}
-                  >
-                    {principle}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+              <div
+                style={{
+                  position: 'relative',
+                  borderRadius: '22px',
+                  overflow: 'hidden',
+                  border: '2.5px solid var(--accent)',
+                  boxShadow: '0 24px 60px rgba(168,67,14,0.35), 0 8px 24px rgba(0,0,0,0.2)',
+                  background: '#000',
+                  width: '100%',
+                  aspectRatio: '9 / 16',
+                }}
+              >
+                <div style={{
+                  position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                  background: 'linear-gradient(90deg, transparent, var(--accent), transparent)',
+                  zIndex: 2,
+                }} />
+                <video
+                  src="/images/video/vera-vladimirovna-o-sebe.mp4"
+                  controls
+                  playsInline
+                  style={{
+                    position: 'absolute', inset: 0,
+                    width: '100%', height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -190,7 +265,7 @@ export default function OMne() {
             </h2>
           </motion.div>
 
-          <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -256,7 +331,7 @@ export default function OMne() {
           style={{ background: 'var(--accent)' }}
         />
         <motion.div
-          className="max-w-2xl mx-auto relative z-10"
+          className="max-w-[700px] mx-auto relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

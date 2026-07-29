@@ -3,8 +3,7 @@ import Navbar from '@/components/vera/Navbar';
 import Hero from '@/components/vera/Hero';
 import IconStrip from '@/components/vera/IconStrip';
 import WhenToReach from '@/components/vera/WhenToReach';
-import HowWeWork from '@/components/vera/HowWeWork';
-import Services from '@/components/vera/Services';
+import HowAndServices from '@/components/vera/HowAndServices';
 import About from '@/components/vera/About';
 import VideoSection from '@/components/vera/VideoSection';
 import Reviews from '@/components/vera/Reviews';
@@ -25,8 +24,7 @@ export default function Home() {
       <Hero />
       <IconStrip />
       <WhenToReach />
-      <HowWeWork />
-      <Services />
+      <HowAndServices />
       <About />
       <VideoSection />
       <Reviews />

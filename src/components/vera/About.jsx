@@ -20,23 +20,38 @@ export default function About() {
       className="relative overflow-hidden py-20 md:py-28 lg:py-36 px-4"
       style={{ background: 'var(--text-white)' }}
     >
+      {/* Оранжевое свечение */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '30%',
+          right: '8%',
+          width: '400px',
+          height: '400px',
+          borderRadius: '50%',
+          background: 'radial-gradient(ellipse at center, rgba(232,102,23,0.18) 0%, transparent 70%)',
+          zIndex: 0,
+          filter: 'blur(40px)',
+        }}
+      />
+      {/* Watermark "Вера" */}
       <div
         className="absolute font-lobster pointer-events-none select-none"
         style={{
           top: '50%',
-          right: '-5%',
+          right: '4%',
           transform: 'translateY(-50%)',
           zIndex: 0,
           fontSize: '200px',
           color: 'var(--accent-glow)',
-          opacity: 0.04,
+          opacity: 0.12,
           lineHeight: 1,
         }}
       >
         Вера
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         <motion.div
           className="mb-14"
           initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}

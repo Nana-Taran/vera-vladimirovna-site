@@ -36,7 +36,7 @@ export default function HowWeWork() {
           background: 'radial-gradient(ellipse at 50% 40%, rgba(169,67,14,0.28) 0%, transparent 60%)',
         }}
       />
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}

@@ -60,7 +60,7 @@ export default function Ierusalim() {
 
       {/* H1 + подзаголовок + AI-резюме */}
       <section className="pt-32 pb-16 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export default function Ierusalim() {
               Одно из самых сильных мест на земле — живая часть её практики.
             </p>
             <p
-              className="font-lato text-base leading-relaxed max-w-2xl"
+              className="font-lato text-base leading-relaxed max-w-[700px]"
               style={{ color: 'var(--text-beige)', fontWeight: 300 }}
             >
               Вера Владимировна регулярно бывает у Стены Плача в Иерусалиме и ведёт там молитвенную практику за своих клиентов. Это живая часть её работы — не маркетинговый приём, а часть духовного пути, который длится уже 35 лет. Особая сила этого места усиливает работу, которую она ведёт для людей по всему миру.
@@ -96,7 +96,7 @@ export default function Ierusalim() {
 
       {/* Основной текст */}
       <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             className="space-y-5"
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function Ierusalim() {
 
       {/* FAQ */}
       <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -207,7 +207,7 @@ export default function Ierusalim() {
           style={{ background: 'var(--accent)' }}
         />
         <motion.div
-          className="max-w-2xl mx-auto relative z-10"
+          className="max-w-[700px] mx-auto relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -72,7 +72,7 @@ export default function Yasnovidenie() {
 
       {/* H1 + подзаголовок + CTA */}
       <section className="pt-32 pb-16 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export default function Yasnovidenie() {
 
       {/* AI-резюме видимый */}
       <section className="py-10 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <p
             className="font-lato text-base leading-relaxed"
             style={{ color: 'var(--text-beige)', fontWeight: 300 }}
@@ -123,7 +123,7 @@ export default function Yasnovidenie() {
 
       {/* Основной текст */}
       <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             className="space-y-5"
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export default function Yasnovidenie() {
 
       {/* 5 пунктов */}
       <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ export default function Yasnovidenie() {
 
       {/* FAQ */}
       <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-dark)' }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <motion.div
             className="mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -278,7 +278,7 @@ export default function Yasnovidenie() {
           style={{ background: 'var(--accent)' }}
         />
         <motion.div
-          className="max-w-2xl mx-auto relative z-10"
+          className="max-w-[700px] mx-auto relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
