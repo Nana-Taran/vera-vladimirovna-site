@@ -247,7 +247,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/yasnovidenie.png"
+                    imageSrc="/images/services/yasnovidenie.webp"
                     imagePosition="72% center"
                     eyebrow="ДУХОВНАЯ ПРАКТИКА"
                     titleLine1="ВИДЕНИЕ"
@@ -269,7 +269,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5, delay: 0.08 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/taro.png"
+                    imageSrc="/images/services/taro.webp"
                     imagePosition="60% center"
                     eyebrow="ТОЧНЫЙ РАСКЛАД"
                     eyebrowIcon="star"
@@ -293,7 +293,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5, delay: 0.16 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/gadanie.png"
+                    imageSrc="/images/services/gadanie.webp"
                     imagePosition="55% center"
                     eyebrow="ТРАДИЦИОННАЯ ПРАКТИКА"
                     eyebrowIcon="moon"
@@ -317,7 +317,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5, delay: 0.08 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/snyatie-negativa.png"
+                    imageSrc="/images/services/snyatie-negativa.webp"
                     imagePosition="60% center"
                     eyebrow="ОЧИЩЕНИЕ И ЗАЩИТА"
                     eyebrowIcon="zap"
@@ -342,7 +342,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5, delay: 0.16 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/lyubovnaya-magiya.png"
+                    imageSrc="/images/services/lyubovnaya-magiya.webp"
                     imagePosition="65% center"
                     eyebrow="ОТНОШЕНИЯ И ЧУВСТВА"
                     eyebrowIcon="heart"
@@ -367,7 +367,7 @@ export default function HowAndServices() {
                   transition={{ duration: 0.5, delay: 0.24 }}
                 >
                   <ServiceCardPremium
-                    imageSrc="/images/services/onlayn-konsultaciya.png"
+                    imageSrc="/images/services/onlayn-konsultaciya.webp"
                     imagePosition="60% center"
                     eyebrow="ДИСТАНЦИОННАЯ ПОМОЩЬ"
                     eyebrowIcon="wifi"
