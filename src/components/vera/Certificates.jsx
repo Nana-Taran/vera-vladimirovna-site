@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 const certs = [
-  { src: '/images/certificates/vera-vladimirovna-dyplom-1.jpg', alt: 'Сертификат 1' },
-  { src: '/images/certificates/vera-vladimirovna-dyplom-2.jpg', alt: 'Сертификат 2' },
-  { src: '/images/certificates/vera-vladimirovna-dyplom-3.jpg', alt: 'Сертификат 3' },
-  { src: '/images/certificates/vera-vladimirovna-dyplom-4.jpg', alt: 'Сертификат 4' },
+  { src: '/images/certificates/vera-vladimirovna-dyplom-1.webp', alt: 'Сертификат 1' },
+  { src: '/images/certificates/vera-vladimirovna-dyplom-2.webp', alt: 'Сертификат 2' },
+  { src: '/images/certificates/vera-vladimirovna-dyplom-3.webp', alt: 'Сертификат 3' },
+  { src: '/images/certificates/vera-vladimirovna-dyplom-4.webp', alt: 'Сертификат 4' },
 ];
 
 export default function Certificates() {

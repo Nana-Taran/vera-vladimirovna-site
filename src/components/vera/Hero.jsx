@@ -51,7 +51,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 hero-bg"
         style={isMobile ? {
-          backgroundImage: "url('/images/hero/vera-hero-banner-mobile.jpg')",
+          backgroundImage: "url('/images/hero/vera-hero-banner-mobile.webp')",
           backgroundSize: 'contain',
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',

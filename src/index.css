@@ -106,7 +106,7 @@ h1 {
 
 /* Hero background — responsive */
 .hero-bg {
-  background-image: url('/images/hero/vera-hero-banner.jpg');
+  background-image: url('/images/hero/vera-hero-banner.webp');
   background-size: cover;
   background-position: center 60%;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ h1 {
 
 @media (max-width: 640px) {
   .hero-bg {
-    background-image: url('/images/hero/vera-hero-banner-mobile.jpg');
+    background-image: url('/images/hero/vera-hero-banner-mobile.webp');
     background-size: contain;
     background-position: center top;
     background-color: #090604;

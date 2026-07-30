@@ -1,31 +1,31 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const reviews = [
   {
     id: 'anna',
     name: 'Анна',
     location: 'Германия, Дюссельдорф',
-    images: ['/images/otzivi/anna-germany-1.png', '/images/otzivi/anna-germany-2.png'],
+    images: ['/images/otzivi/anna-germany-1.webp', '/images/otzivi/anna-germany-2.webp'],
   },
   {
     id: 'vera',
     name: 'Вера',
     location: 'Италия, Рим',
-    images: ['/images/otzivi/vera-italy.png'],
+    images: ['/images/otzivi/vera-italy.webp'],
   },
   {
     id: 'maria',
     name: 'Мария',
     location: 'Россия, Краснодар',
-    images: ['/images/otzivi/maria-russia.png'],
+    images: ['/images/otzivi/maria-russia.webp'],
   },
   {
     id: 'sergey',
     name: 'Сергей',
     location: 'Россия, Краснодар',
-    images: ['/images/otzivi/sergey-russia.png'],
+    images: ['/images/otzivi/sergey-russia.webp'],
   },
   // Следующие 2 отзыва добавить позже:
   { id: 'soon1', name: '', location: '', images: [] },
@@ -36,6 +36,7 @@ const VISIBLE = 5; // телефонов в ряд на десктопе
 
 export default function Reviews() {
   const [start, setStart] = useState(0);
+  const [lightbox, setLightbox] = useState(null);
   const total = reviews.length;
 
   const prev = () => setStart((s) => (s - 1 + total) % total);
@@ -92,14 +93,14 @@ export default function Reviews() {
         {/* Desktop: 5 телефонов в ряд */}
         <div className="hidden md:grid grid-cols-5 gap-3">
           {visibleItems.map((review, pos) => (
-            <PhoneMockup key={review.id + pos} review={review} isCenter={pos === 1 || pos === 2} />
+            <PhoneMockup key={review.id + pos} review={review} isCenter={pos === 1 || pos === 2} onZoom={setLightbox} />
           ))}
         </div>
 
         {/* Mobile: 2 телефона рядом */}
         <div className="md:hidden grid grid-cols-2 gap-3">
           {[reviews[start % total], reviews[(start + 1) % total]].map((review, i) => (
-            <PhoneMockup key={review.id + i} review={review} isCenter={true} />
+            <PhoneMockup key={review.id + i} review={review} isCenter={true} onZoom={setLightbox} />
           ))}
         </div>
 
@@ -137,11 +138,59 @@ export default function Reviews() {
           </button>
         </div>
       </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setLightbox(null)}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 999,
+              background: 'rgba(0,0,0,0.92)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              padding: '16px',
+            }}
+          >
+            <motion.img
+              src={lightbox}
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                maxHeight: '90vh',
+                maxWidth: '90vw',
+                objectFit: 'contain',
+                borderRadius: '12px',
+                boxShadow: '0 24px 80px rgba(0,0,0,0.8)',
+              }}
+              alt="Отзыв"
+            />
+            <button
+              onClick={() => setLightbox(null)}
+              style={{
+                position: 'fixed', top: '20px', right: '20px',
+                background: 'rgba(255,255,255,0.1)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                borderRadius: '50%', width: '40px', height: '40px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: '#fff', cursor: 'pointer',
+              }}
+            >
+              <X size={18} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
 
-function PhoneMockup({ review, isCenter }) {
+function PhoneMockup({ review, isCenter, onZoom }) {
   const [imgIndex, setImgIndex] = useState(0);
   const hasMultiple = review.images.length > 1;
   const isEmpty = review.images.length === 0;
@@ -218,12 +267,14 @@ function PhoneMockup({ review, isCenter }) {
             <img
               src={review.images[imgIndex]}
               alt={`Отзыв — ${review.name}`}
+              onClick={() => !isEmpty && onZoom && onZoom(review.images[imgIndex])}
               style={{
                 width: '100%',
                 height: '360px',
                 objectFit: 'cover',
                 objectPosition: 'top',
                 display: 'block',
+                cursor: 'zoom-in',
               }}
             />
           )}
