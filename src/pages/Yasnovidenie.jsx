@@ -69,6 +69,15 @@ export default function Yasnovidenie() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ясновидение онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Потомственное ясновидение — 35 лет практики. Онлайн-консультация для русскоязычных в любой стране." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Ясновидение онлайн",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/yasnovidenie",
+          "description":"Онлайн-консультация ясновидящей Веры Владимировны. Прямой взгляд на ситуацию.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>

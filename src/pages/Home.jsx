@@ -12,7 +12,6 @@ import HowNotToMistake from '@/components/vera/HowNotToMistake';
 import FAQ from '@/components/vera/FAQ';
 import FinalCTA from '@/components/vera/FinalCTA';
 import Footer from '@/components/vera/Footer';
-import FAB from '@/components/vera/FAB';
 
 export default function Home() {
   return (
@@ -33,7 +32,6 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
-      <FAB />
     </div>
   );
 }

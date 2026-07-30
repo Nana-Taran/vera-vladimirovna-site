@@ -65,6 +65,15 @@ export default function LyubovnayaMagiya() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Помощь в отношениях и любовная магия — Вера Владимировна" />
         <meta name="twitter:description" content="Сложная ситуация в любви? Вера посмотрит что происходит и скажет честно, что можно сделать." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Любовная магия онлайн",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/lyubovnaya-magiya",
+          "description":"Работа с отношениями онлайн от Веры Владимировны. Гармонизация, помощь при расставании.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>

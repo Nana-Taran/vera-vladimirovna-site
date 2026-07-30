@@ -69,6 +69,15 @@ export default function SnyatieNegativa() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Снятие негатива онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Диагностика и очищение от негативных влияний. Онлайн-работа с русскоязычными клиентами по всему миру." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Снятие негатива онлайн",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/snyatie-negativa",
+          "description":"Снятие негативных влияний онлайн. Диагностика и очищение от Веры Владимировны.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>

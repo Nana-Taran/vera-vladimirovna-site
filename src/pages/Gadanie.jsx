@@ -65,6 +65,15 @@ export default function Gadanie() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Гадание онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Все виды гадания онлайн. Ответ на конкретный вопрос — быстро, честно, конфиденциально." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Гадание онлайн",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/gadanie",
+          "description":"Гадание онлайн от Веры Владимировны. Традиционные практики, чёткий ответ.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>
