@@ -65,6 +65,15 @@ export default function Taro() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Расклад Таро онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Расклад Таро и диагностика ситуации. Честный разбор — что происходит и что можно сделать. Онлайн." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Таро онлайн",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/taro",
+          "description":"Расклад Таро онлайн от Веры Владимировны. Ответ на конкретный вопрос.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>

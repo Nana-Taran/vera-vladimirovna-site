@@ -65,6 +65,15 @@ export default function OnlineKonsultaciya() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Онлайн-консультация — Вера Владимировна" />
         <meta name="twitter:description" content="Онлайн-консультация ясновидящей для русскоязычных в Европе, Израиле, США, Канаде и других странах." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"Service",
+          "name":"Онлайн-консультация ясновидящей",
+          "provider":{"@type":"Person","name":"Вера Владимировна","url":"https://veravladimirovna.com"},
+          "url":"https://veravladimirovna.com/online-konsultaciya",
+          "description":"Онлайн-консультация ясновидящей Веры Владимировны через Telegram или WhatsApp.",
+          "areaServed":"Worldwide","inLanguage":"ru",
+          "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://t.me/Vera_vladimerovna"}
+        })}</script>
       </Helmet>
 
       <noscript>

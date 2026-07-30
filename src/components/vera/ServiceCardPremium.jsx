@@ -261,7 +261,7 @@ export default function ServiceCardPremium({
           {topImageSrc ? (
             <img
               src={topImageSrc}
-              alt=""
+              alt={[titleLine1, titleLine2].filter(Boolean).join(' ')}
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           ) : (

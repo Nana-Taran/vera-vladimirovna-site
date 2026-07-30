@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import FAB from './components/vera/FAB';
 import Home from './pages/Home';
 import PageNotFound from './lib/PageNotFound';
 
@@ -66,6 +67,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <FAB />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/uslugi" element={<Uslugi />} />
