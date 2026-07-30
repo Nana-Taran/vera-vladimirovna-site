@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const stats = [
   { num: '35+', label: 'лет практики' },
-  { num: '500+', label: 'клиентов' },
+  { num: '1500+', label: 'клиентов' },
   { num: '12+', label: 'стран' },
 ];
 

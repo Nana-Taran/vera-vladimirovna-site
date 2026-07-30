@@ -58,6 +58,13 @@ export default function OnlineKonsultaciya() {
           content="Консультация ясновидящей онлайн через Telegram и WhatsApp. Честный разбор ситуации без общих слов. 35 лет практики. Клиенты из Европы, Израиля, США."
         />
         <link rel="canonical" href="https://veravladimirovna.com/online-konsultaciya" />
+        <meta property="og:title" content="Онлайн-консультация — Вера Владимировна" />
+        <meta property="og:description" content="Онлайн-консультация ясновидящей для русскоязычных в Европе, Израиле, США, Канаде и других странах." />
+        <meta property="og:url" content="https://veravladimirovna.com/online-konsultaciya" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Онлайн-консультация — Вера Владимировна" />
+        <meta name="twitter:description" content="Онлайн-консультация ясновидящей для русскоязычных в Европе, Израиле, США, Канаде и других странах." />
       </Helmet>
 
       <noscript>
