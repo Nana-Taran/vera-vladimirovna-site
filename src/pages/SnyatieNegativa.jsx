@@ -62,6 +62,13 @@ export default function SnyatieNegativa() {
           content="Диагностика негативных влияний и работа по их устранению. Без запугивания — сначала честный разбор ситуации. Вера Владимировна, онлайн."
         />
         <link rel="canonical" href="https://veravladimirovna.com/snyatie-negativa" />
+        <meta property="og:title" content="Снятие негатива онлайн — Вера Владимировна" />
+        <meta property="og:description" content="Диагностика и очищение от негативных влияний. Онлайн-работа с русскоязычными клиентами по всему миру." />
+        <meta property="og:url" content="https://veravladimirovna.com/snyatie-negativa" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Снятие негатива онлайн — Вера Владимировна" />
+        <meta name="twitter:description" content="Диагностика и очищение от негативных влияний. Онлайн-работа с русскоязычными клиентами по всему миру." />
       </Helmet>
 
       <noscript>

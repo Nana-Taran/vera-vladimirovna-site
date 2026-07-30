@@ -58,6 +58,13 @@ export default function Taro() {
           content="Глубокий расклад карт Таро на ваш вопрос. Отношения, карьера, жизненный выбор. Онлайн для клиентов из любой страны. 35 лет практики."
         />
         <link rel="canonical" href="https://veravladimirovna.com/taro" />
+        <meta property="og:title" content="Расклад Таро онлайн — Вера Владимировна" />
+        <meta property="og:description" content="Расклад Таро и диагностика ситуации. Честный разбор — что происходит и что можно сделать. Онлайн." />
+        <meta property="og:url" content="https://veravladimirovna.com/taro" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Расклад Таро онлайн — Вера Владимировна" />
+        <meta name="twitter:description" content="Расклад Таро и диагностика ситуации. Честный разбор — что происходит и что можно сделать. Онлайн." />
       </Helmet>
 
       <noscript>

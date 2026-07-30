@@ -58,6 +58,13 @@ export default function Gadanie() {
           content="Гадание на конкретный вопрос онлайн. Честный ответ без общих слов. Ясновидящая Вера Владимировна, 35 лет практики, работает из любой страны."
         />
         <link rel="canonical" href="https://veravladimirovna.com/gadanie" />
+        <meta property="og:title" content="Гадание онлайн — Вера Владимировна" />
+        <meta property="og:description" content="Все виды гадания онлайн. Ответ на конкретный вопрос — быстро, честно, конфиденциально." />
+        <meta property="og:url" content="https://veravladimirovna.com/gadanie" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Гадание онлайн — Вера Владимировна" />
+        <meta name="twitter:description" content="Все виды гадания онлайн. Ответ на конкретный вопрос — быстро, честно, конфиденциально." />
       </Helmet>
 
       <noscript>

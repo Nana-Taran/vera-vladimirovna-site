@@ -166,7 +166,18 @@ export default function Uslugi() {
           content="Ясновидение, Таро, гадание, снятие негатива, любовная магия, диагностика ситуации — онлайн. Вера Владимировна, 35 лет практики, клиенты из 12+ стран."
         />
         <link rel="canonical" href="https://veravladimirovna.com/uslugi" />
+        <meta property="og:title" content="Все услуги — Вера Владимировна" />
+        <meta property="og:description" content="12 услуг: ясновидение, таро, гадание, снятие негатива, любовная магия, онлайн-консультация и другие. Онлайн, конфиденциально." />
+        <meta property="og:url" content="https://veravladimirovna.com/uslugi" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Все услуги — Вера Владимировна" />
+        <meta name="twitter:description" content="12 услуг: ясновидение, таро, гадание, снятие негатива, любовная магия, онлайн-консультация и другие. Онлайн, конфиденциально." />
       </Helmet>
+
+      <noscript>
+        Вера Владимировна — ясновидящая с 35-летним опытом. На этой странице собраны все 12 услуг: ясновидение, таро, гадание, снятие негатива, любовная магия, онлайн-консультация, диагностика ситуации, таро на отношения, защита и оберег, помощь после расставания, анализ отношений в паре, молитвенная практика у Стены Плача в Иерусалиме. Работает онлайн с русскоязычными клиентами по всему миру.
+      </noscript>
 
       <Navbar />
 
