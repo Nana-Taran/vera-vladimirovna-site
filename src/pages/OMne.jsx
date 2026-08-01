@@ -102,7 +102,7 @@ export default function OMne() {
       </section>
 
       {/* Биография */}
-      <section className="py-16 md:py-20 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
+      <section id="bio" className="py-16 md:py-20 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
         {/* Glow 1 */}
         <div className="absolute inset-0 pointer-events-none" style={{
           background: `radial-gradient(ellipse 130% 90% at 88% 100%,
@@ -249,7 +249,7 @@ export default function OMne() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-dark)' }}>
+      <section id="faq" className="py-16 md:py-24 px-4" style={{ background: 'var(--bg-dark)' }}>
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             className="mb-12"

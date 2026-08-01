@@ -138,7 +138,7 @@ export default function Yasnovidenie() {
       </section>
 
       {/* Основной текст */}
-      <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
+      <section id="content" className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
         <div className="max-w-[900px] mx-auto">
           <motion.div
             className="space-y-5"
