@@ -78,7 +78,7 @@ export default function Reviews() {
           </p>
           <h2
             className="font-bebas leading-none mb-1"
-            style={{ color: '#090604', fontSize: 'clamp(38px, 6vw, 58px)' }}
+            style={{ color: 'var(--bg-deep)', fontSize: 'clamp(38px, 6vw, 58px)' }}
           >
             РЕАЛЬНЫЕ КЛИЕНТЫ.
           </h2>

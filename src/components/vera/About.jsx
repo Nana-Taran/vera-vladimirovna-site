@@ -67,7 +67,7 @@ export default function About() {
           </p>
           <h2
             className="font-bebas leading-none mb-2"
-            style={{ color: '#090604', fontSize: 'clamp(36px, 5.5vw, 58px)' }}
+            style={{ color: 'var(--bg-deep)', fontSize: 'clamp(36px, 5.5vw, 58px)' }}
           >
             35 ЛЕТ — ЭТО НЕ ПРОСТО ОПЫТ.
           </h2>
@@ -96,7 +96,7 @@ export default function About() {
               </div>
               <div
                 className="font-lato text-sm"
-                style={{ color: '#1A0E07', fontWeight: 300 }}
+                style={{ color: 'var(--bg-dark)', fontWeight: 300 }}
               >
                 {s.label}
               </div>
@@ -114,7 +114,7 @@ export default function About() {
           {points.map((p, i) => (
             <li key={i} className="flex items-center gap-3">
               <span style={{ color: 'var(--accent)', fontSize: '18px' }}>✦</span>
-              <span className="font-lato text-base" style={{ color: '#1A0E07', fontWeight: 400 }}>
+              <span className="font-lato text-base" style={{ color: 'var(--bg-dark)', fontWeight: 400 }}>
                 {p}
               </span>
             </li>

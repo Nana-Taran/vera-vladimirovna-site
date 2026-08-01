@@ -17,7 +17,17 @@ export default function Home() {
   return (
     <div style={{ background: 'var(--bg-deep)', minHeight: '100vh' }}>
       <Helmet>
+        <title>Вера Владимировна — ясновидящая онлайн</title>
+        <meta name="description" content="Онлайн-консультация ясновидящей Веры Владимировны. Таро, гадание, снятие негатива, любовная магия. Работаю с диаспорой по всему миру." />
         <link rel="canonical" href="https://veravladimirovna.com/" />
+        <meta property="og:title" content="Вера Владимировна — ясновидящая онлайн" />
+        <meta property="og:description" content="Онлайн-консультация ясновидящей Веры Владимировны. Таро, гадание, снятие негатива, любовная магия." />
+        <meta property="og:url" content="https://veravladimirovna.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Вера Владимировна — ясновидящая онлайн" />
+        <meta name="twitter:description" content="Онлайн-консультация ясновидящей Веры Владимировны." />
       </Helmet>
       <Navbar />
       <Hero />

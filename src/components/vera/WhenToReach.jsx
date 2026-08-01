@@ -139,7 +139,7 @@ export default function WhenToReach() {
             </p>
             <h2
               className="font-bebas leading-none mb-8"
-              style={{ color: '#090604', fontSize: 'clamp(42px, 6vw, 62px)' }}
+              style={{ color: 'var(--bg-deep)', fontSize: 'clamp(42px, 6vw, 62px)' }}
             >
               ВАЖНО ПРОСТО
               <br />
@@ -163,7 +163,7 @@ export default function WhenToReach() {
                   </span>
                   <span
                     className="font-lato text-base leading-relaxed"
-                    style={{ color: '#1A0E07', fontWeight: 400 }}
+                    style={{ color: 'var(--bg-dark)', fontWeight: 400 }}
                   >
                     {reason}
                   </span>

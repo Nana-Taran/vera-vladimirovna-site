@@ -55,7 +55,7 @@ export default function Hero() {
           backgroundSize: 'contain',
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
-          backgroundColor: '#090604',
+          backgroundColor: 'var(--bg-deep)',
         } : undefined}
       />
 

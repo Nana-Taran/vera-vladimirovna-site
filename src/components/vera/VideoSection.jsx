@@ -78,6 +78,7 @@ export default function VideoSection() {
             >
               <video
                 src="/images/video/vera-ierusalim-compressed.mp4"
+                preload="none"
                 controls
                 playsInline
                 style={{
