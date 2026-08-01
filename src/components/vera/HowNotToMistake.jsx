@@ -78,7 +78,7 @@ export default function HowNotToMistake() {
                 </div>
                 <span
                   className="font-lato text-sm leading-relaxed"
-                  style={{ color: '#1A0E07', fontWeight: 400 }}
+                  style={{ color: 'var(--bg-dark)', fontWeight: 400 }}
                 >
                   {item}
                 </span>
