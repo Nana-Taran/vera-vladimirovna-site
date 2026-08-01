@@ -51,7 +51,7 @@ export default function HowAndServices() {
   return (
     <>
       <section
-        id="how"
+        id="services"
         className="relative overflow-hidden py-20 md:py-28 lg:py-32 px-4"
         style={{ background: 'var(--bg-deep)' }}
       >

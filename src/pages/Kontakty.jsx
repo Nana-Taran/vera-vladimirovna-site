@@ -107,7 +107,7 @@ export default function Kontakty() {
       </section>
 
       {/* Текст + кнопки контактов */}
-      <section className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
+      <section id="form" className="py-16 md:py-20 px-4" style={{ background: 'var(--bg-dark)' }}>
         <div className="max-w-[900px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

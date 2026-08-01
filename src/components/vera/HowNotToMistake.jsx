@@ -17,7 +17,7 @@ const veraWay = [
 
 export default function HowNotToMistake() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="how-not-to-mistake" className="relative overflow-hidden">
       <div className="grid md:grid-cols-2">
         <motion.div
           className="py-16 md:py-24 px-8 md:px-14 lg:px-20"

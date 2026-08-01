@@ -204,7 +204,7 @@ export default function Uslugi() {
       </section>
 
       {/* Сетка 12 карточек */}
-      <section className="py-24 px-6 md:px-8 lg:px-12 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
+      <section id="grid" className="py-24 px-6 md:px-8 lg:px-12 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
         {/* Glow 1 */}
         <div className="absolute inset-0 pointer-events-none" style={{
           background: `radial-gradient(ellipse 130% 90% at 88% 100%,

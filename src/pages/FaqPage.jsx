@@ -116,7 +116,7 @@ export default function FaqPage() {
       </section>
 
       {/* 12 вопросов */}
-      <section className="py-16 md:py-24 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
+      <section id="questions" className="py-16 md:py-24 px-4 relative overflow-hidden" style={{ background: 'var(--text-white)' }}>
         {/* Glow 1 */}
         <div className="absolute inset-0 pointer-events-none" style={{
           background: `radial-gradient(ellipse 130% 90% at 88% 100%,
