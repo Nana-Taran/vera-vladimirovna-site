@@ -65,7 +65,7 @@ export default function SnyatieNegativa() {
         <meta property="og:title" content="Снятие негатива онлайн — Вера Владимировна" />
         <meta property="og:description" content="Диагностика и очищение от негативных влияний. Онлайн-работа с русскоязычными клиентами по всему миру." />
         <meta property="og:url" content="https://veravladimirovna.com/snyatie-negativa" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Снятие негатива онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Диагностика и очищение от негативных влияний. Онлайн-работа с русскоязычными клиентами по всему миру." />

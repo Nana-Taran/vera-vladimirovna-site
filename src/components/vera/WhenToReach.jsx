@@ -24,14 +24,25 @@ export default function WhenToReach() {
   return (
     <section
       id="when-to-reach"
-      className="relative overflow-hidden px-4"
+      className="when-to-reach-section relative overflow-hidden px-4"
       style={{
         background: 'var(--text-white)',
-        marginTop: '-150px',
-        paddingTop: 'calc(5rem + 150px)',
-        paddingBottom: '9rem',
       }}
     >
+      <style>{`
+        .when-to-reach-section {
+          margin-top: 0;
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+        @media (min-width: 768px) {
+          .when-to-reach-section {
+            margin-top: -150px;
+            padding-top: calc(5rem + 150px);
+            padding-bottom: 9rem;
+          }
+        }
+      `}</style>
       {/* Glow layer 1 — wide warm field, right half bottom */}
       <div
         className="absolute inset-0 pointer-events-none"

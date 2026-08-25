@@ -32,9 +32,20 @@ const items = [
 export default function IconStrip() {
   return (
     <div
-      className="relative z-20 px-4"
-      style={{ marginTop: '0' }}
+      className="icon-strip-shell relative z-20 px-4"
     >
+      <style>{`
+        .icon-strip-shell {
+          margin-top: 86px;
+          margin-bottom: 24px;
+        }
+        @media (min-width: 768px) {
+          .icon-strip-shell {
+            margin-top: 18px;
+            margin-bottom: -134px;
+          }
+        }
+      `}</style>
       <motion.div
         className="max-w-[1400px] mx-auto rounded-xl px-6 py-6 md:py-8"
         style={{ background: 'var(--bg-dark)' }}

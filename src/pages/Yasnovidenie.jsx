@@ -65,7 +65,7 @@ export default function Yasnovidenie() {
         <meta property="og:title" content="Ясновидение онлайн — Вера Владимировна" />
         <meta property="og:description" content="Потомственное ясновидение — 35 лет практики. Онлайн-консультация для русскоязычных в любой стране." />
         <meta property="og:url" content="https://veravladimirovna.com/yasnovidenie" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ясновидение онлайн — Вера Владимировна" />
         <meta name="twitter:description" content="Потомственное ясновидение — 35 лет практики. Онлайн-консультация для русскоязычных в любой стране." />

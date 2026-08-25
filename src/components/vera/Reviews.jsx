@@ -27,9 +27,6 @@ const reviews = [
     location: 'Россия, Краснодар',
     images: ['/images/otzivi/sergey-russia.webp'],
   },
-  // Следующие 2 отзыва добавить позже:
-  { id: 'soon1', name: '', location: '', images: [] },
-  { id: 'soon2', name: '', location: '', images: [] },
 ];
 
 const VISIBLE = 5; // телефонов в ряд на десктопе
@@ -38,11 +35,12 @@ export default function Reviews() {
   const [start, setStart] = useState(0);
   const [lightbox, setLightbox] = useState(null);
   const total = reviews.length;
+  const visibleCount = Math.min(VISIBLE, total);
 
   const prev = () => setStart((s) => (s - 1 + total) % total);
   const next = () => setStart((s) => (s + 1) % total);
 
-  const visibleItems = Array.from({ length: VISIBLE }, (_, i) => reviews[(start + i) % total]);
+  const visibleItems = Array.from({ length: visibleCount }, (_, i) => reviews[(start + i) % total]);
 
   return (
     <section
@@ -91,7 +89,7 @@ export default function Reviews() {
         </motion.div>
 
         {/* Desktop: 5 телефонов в ряд */}
-        <div className="hidden md:grid grid-cols-5 gap-3">
+        <div className="hidden md:grid grid-cols-4 gap-3">
           {visibleItems.map((review, pos) => (
             <PhoneMockup key={review.id + pos} review={review} isCenter={pos === 1 || pos === 2} onZoom={setLightbox} />
           ))}

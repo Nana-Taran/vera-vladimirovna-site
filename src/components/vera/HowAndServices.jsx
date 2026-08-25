@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Eye, Star, Layers, Zap, Heart, Wifi, X } from 'lucide-react';
 import ServiceCardPremium from './ServiceCardPremium';
+import { pushLeadEvent } from '@/lib/analytics';
 
 const steps = [
   { num: '01', title: 'Вы пишете',        text: 'Опишите что тревожит и о чём хотите узнать.' },
@@ -40,6 +42,14 @@ export default function HowAndServices() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const text = [
+      'Заявка с сайта Веры Владимировны',
+      `Имя: ${form.name}`,
+      `Телефон / Telegram: ${form.phone}`,
+      form.message ? `Вопрос: ${form.message}` : '',
+    ].filter(Boolean).join('\n');
+    pushLeadEvent('form_submit', { channel: 'whatsapp', form_location: 'services_modal' });
+    window.open(`https://wa.me/995558314030?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
     setSent(true);
   };
 
@@ -47,6 +57,21 @@ export default function HowAndServices() {
     setModalOpen(false);
     setTimeout(() => setSent(false), 400);
   };
+
+  const renderAllServicesButton = () => (
+    <Link
+      to="/uslugi"
+      className="inline-flex w-full items-center justify-center rounded-md px-4 py-2 font-montserrat text-[9px] font-bold uppercase transition-all hover:-translate-y-0.5"
+      style={{
+        background: 'var(--accent)',
+        color: 'var(--bg-deep)',
+        letterSpacing: '0.09em',
+        textDecoration: 'none',
+      }}
+    >
+      Все услуги →
+    </Link>
+  );
 
   return (
     <>
@@ -257,6 +282,8 @@ export default function HowAndServices() {
                       'Узнаю причины происходящего и скрытые факторы',
                       'Покажу возможное развитие и лучший путь для вас',
                     ]}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -281,6 +308,8 @@ export default function HowAndServices() {
                       'Чёткие ответы и рекомендации по ситуации',
                     ]}
                     pointIcons={['card', 'check']}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -305,6 +334,8 @@ export default function HowAndServices() {
                       'Правдивые ответы и ясные подсказки',
                     ]}
                     pointIcons={['compass', 'check']}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -330,6 +361,8 @@ export default function HowAndServices() {
                       'Очищение и защита на долгосрочный результат',
                     ]}
                     pointIcons={['shield', 'compass']}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -355,6 +388,8 @@ export default function HowAndServices() {
                       'Работа с причинами конфликтов и отдаления',
                     ]}
                     pointIcons={['heart', 'check']}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -380,6 +415,8 @@ export default function HowAndServices() {
                       'Конфиденциальность и индивидуальный подход',
                     ]}
                     pointIcons={['wifi', 'shield']}
+                    stretchContent={true}
+                    footer={renderAllServicesButton()}
                   />
                 </motion.div>
 
@@ -460,13 +497,13 @@ export default function HowAndServices() {
                     className="font-bebas mb-2"
                     style={{ color: 'var(--text-white)', fontSize: '28px' }}
                   >
-                    Заявка принята
+                    Заявка подготовлена
                   </h3>
                   <p
                     className="font-lato text-sm mb-6"
                     style={{ color: 'var(--text-beige)', fontWeight: 300 }}
                   >
-                    Вера Владимировна свяжется с вами в ближайшее время.
+                    Отправьте подготовленное сообщение в WhatsApp, чтобы Вера Владимировна получила ваш запрос.
                   </p>
                   <MessengerButtons />
                 </div>

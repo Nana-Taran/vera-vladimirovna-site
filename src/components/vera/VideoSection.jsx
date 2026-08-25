@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { pushLeadEvent } from '@/lib/analytics';
 
 export default function VideoSection() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
@@ -7,58 +8,126 @@ export default function VideoSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // здесь будет интеграция с бэкендом
+    const text = [
+      'Заявка с сайта Веры Владимировны',
+      `Имя: ${form.name}`,
+      `Телефон / Telegram: ${form.phone}`,
+      form.message ? `Вопрос: ${form.message}` : '',
+    ].filter(Boolean).join('\n');
+    pushLeadEvent('form_submit', { channel: 'whatsapp', form_location: 'ierusalim' });
+    window.open(`https://wa.me/995558314030?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
     setSent(true);
   };
 
   return (
     <section
       id="ierusalim"
-      className="relative py-20 md:py-28 px-4"
-      style={{ background: 'var(--bg-deep)' }}
+      className="relative overflow-hidden pt-12 pb-12 md:pt-40 md:pb-28 px-4"
+      style={{ background: 'var(--text-white)' }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at 30% 50%, rgba(169,67,14,0.15) 0%, transparent 65%)',
+          background: `radial-gradient(ellipse 125% 90% at 0% 0%,
+            rgba(195,72,8,0.72) 0%,
+            rgba(215,88,12,0.48) 18%,
+            rgba(230,100,20,0.24) 40%,
+            rgba(232,102,23,0.08) 60%,
+            transparent 76%)`,
+          zIndex: 0,
         }}
       />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse 90% 72% at 12% 8%,
+            rgba(210,85,10,0.42) 0%,
+            rgba(225,100,18,0.22) 30%,
+            rgba(232,102,23,0.08) 56%,
+            transparent 74%)`,
+          zIndex: 0,
+        }}
+      />
+      <svg
+        className="absolute pointer-events-none hidden md:block"
+        style={{
+          top: '-8%',
+          left: '-4%',
+          width: '45%',
+          height: '92%',
+          transform: 'rotate(180deg) scaleX(-1)',
+          zIndex: 0,
+        }}
+        viewBox="0 0 420 560" preserveAspectRatio="xMinYMid meet" fill="none"
+      >
+        <path
+          d="M380 10 C430 80 370 160 330 250 C290 340 330 420 360 530"
+          stroke="#C8520A"
+          strokeWidth="5"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.42"
+        />
+        <path
+          d="M400 5 C450 75 390 155 350 245 C310 335 350 415 380 525"
+          stroke="#D4620C"
+          strokeWidth="3"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.28"
+        />
+        <path
+          d="M360 15 C410 85 350 165 310 255 C270 345 310 425 340 535"
+          stroke="#A9430E"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.18"
+        />
+        <path
+          d="M415 20 C465 90 405 170 365 260 C325 350 365 430 395 540"
+          stroke="#E86617"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.14"
+        />
+      </svg>
 
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative" style={{ zIndex: 10 }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start md:items-stretch">
 
-        {/* Заголовок */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
+          {/* Правая — заголовок */}
+          <motion.div
+            className="mb-0 md:col-start-2 md:row-start-1"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
           <p
             className="font-montserrat font-semibold text-xs uppercase mb-3"
-            style={{ color: 'var(--accent)', letterSpacing: '0.2em' }}
+            style={{ color: 'var(--accent-glow)', letterSpacing: '0.2em' }}
           >
             ★ ИЕРУСАЛИМ — СТЕНА ПЛАЧА
           </p>
           <h2
             className="font-bebas leading-none"
-            style={{ color: 'var(--text-white)', fontSize: 'clamp(32px, 5vw, 52px)' }}
+            style={{ color: 'var(--bg-deep)', fontSize: 'clamp(32px, 5vw, 52px)' }}
           >
             РАБОТА У СТЕНЫ ПЛАЧА
           </h2>
           <p
             className="font-lato text-sm mt-2"
-            style={{ color: 'var(--text-beige)', fontWeight: 300, maxWidth: '520px' }}
+            style={{ color: 'var(--bg-dark)', fontWeight: 400, maxWidth: '520px' }}
           >
             Молитвы и послания, переданные к Стене Плача. Оставьте заявку — и Вера Владимировна свяжется с вами.
           </p>
         </motion.div>
 
-        {/* Два блока: видео + форма */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-          {/* Левая — видео */}
+          {/* Правая — видео */}
           <motion.div
+            className="md:col-start-2 md:row-start-2"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -92,8 +161,9 @@ export default function VideoSection() {
             </div>
           </motion.div>
 
-          {/* Правая — форма */}
+          {/* Левая — форма */}
           <motion.div
+            className="md:col-start-1 md:row-start-2"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -117,13 +187,13 @@ export default function VideoSection() {
                     className="font-bebas mb-2"
                     style={{ color: 'var(--text-white)', fontSize: '28px' }}
                   >
-                    Заявка принята
+                    Заявка подготовлена
                   </h3>
                   <p
                     className="font-lato text-sm"
                     style={{ color: 'var(--text-beige)', fontWeight: 300 }}
                   >
-                    Вера Владимировна свяжется с вами в ближайшее время.
+                    Отправьте подготовленное сообщение в WhatsApp, чтобы Вера Владимировна получила ваш запрос.
                   </p>
                 </div>
               ) : (

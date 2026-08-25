@@ -169,7 +169,7 @@ export default function Uslugi() {
         <meta property="og:title" content="Все услуги — Вера Владимировна" />
         <meta property="og:description" content="12 услуг: ясновидение, таро, гадание, снятие негатива, любовная магия, онлайн-консультация и другие. Онлайн, конфиденциально." />
         <meta property="og:url" content="https://veravladimirovna.com/uslugi" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Все услуги — Вера Владимировна" />
         <meta name="twitter:description" content="12 услуг: ясновидение, таро, гадание, снятие негатива, любовная магия, онлайн-консультация и другие. Онлайн, конфиденциально." />
@@ -225,6 +225,7 @@ export default function Uslugi() {
             {services.map((svc, i) => (
               <motion.div
                 key={i}
+                className="h-full"
                 initial={{ opacity: 0, y: 20, scale: 0.97 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -242,12 +243,14 @@ export default function Uslugi() {
                   titleLine2={svc.titleLine2}
                   ribbon={svc.ribbon}
                   description={svc.description}
+                  alignContent={true}
                   footer={
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                       <a
                         href={TG}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="vera-liquid-button"
                         style={{
                           display: 'block', textAlign: 'center',
                           background: 'var(--accent)', color: 'var(--bg-deep)',
@@ -261,6 +264,7 @@ export default function Uslugi() {
                       </a>
                       <Link
                         to={svc.slug}
+                        className="vera-liquid-button"
                         style={{
                           display: 'block', textAlign: 'center',
                           border: '1px solid rgba(231,119,30,0.45)',

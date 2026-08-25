@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import AnalyticsTracker from './components/vera/AnalyticsTracker';
 import FAB from './components/vera/FAB';
 import Home from './pages/Home';
 import PageNotFound from './lib/PageNotFound';
@@ -63,9 +64,10 @@ import UkraintsvSlovakii from './pages/geo/UkraintsvSlovakii';
 import UkraintsvSsha from './pages/geo/UkraintsvSsha';
 import UkraintsvVengrii from './pages/geo/UkraintsvVengrii';
 
-function App() {
+export function AppRoutes() {
   return (
-    <Router>
+    <>
+      <AnalyticsTracker />
       <ScrollToTop />
       <FAB />
       <Routes>
@@ -129,6 +131,14 @@ function App() {
         <Route path="/ukraintsy-v-vengrii" element={<UkraintsvVengrii />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }
