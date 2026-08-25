@@ -147,6 +147,7 @@ export default function VideoSection() {
             >
               <video
                 src="/images/video/vera-ierusalim-compressed.mp4"
+                poster="/images/video/vera-ierusalim-poster.jpg"
                 preload="metadata"
                 controls
                 playsInline

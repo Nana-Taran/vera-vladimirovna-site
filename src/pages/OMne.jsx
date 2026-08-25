@@ -223,6 +223,7 @@ export default function OMne() {
                 }} />
                 <video
                   src="/images/video/vera-vladimirovna-o-sebe.mp4"
+                  poster="/images/video/vera-o-sebe-poster.jpg"
                   preload="metadata"
                   controls
                   playsInline
