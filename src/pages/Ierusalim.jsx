@@ -53,7 +53,7 @@ export default function Ierusalim() {
         <meta property="og:title" content="Вера у Стены Плача в Иерусалиме" />
         <meta property="og:description" content="Молитвенная практика у Стены Плача — живая часть работы Веры Владимировны. Доступно для всех клиентов." />
         <meta property="og:url" content="https://veravladimirovna.com/ierusalim" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Вера у Стены Плача в Иерусалиме" />
         <meta name="twitter:description" content="Молитвенная практика у Стены Плача — живая часть работы Веры Владимировны. Доступно для всех клиентов." />

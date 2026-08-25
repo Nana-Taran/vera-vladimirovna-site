@@ -9,9 +9,179 @@
   border-color: rgba(231,119,30,0.72) !important;
   box-shadow: 0 24px 70px rgba(0,0,0,0.48), 0 0 32px rgba(231,119,30,0.06) !important;
 }
+.card-service-premium--aligned .card-service-premium__content {
+  min-height: 238px;
+}
+.card-service-premium--aligned .card-service-premium__eyebrow {
+  min-height: 20px;
+}
+.card-service-premium--aligned .card-service-premium__title {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.card-service-premium--aligned .card-service-premium__ribbon {
+  min-height: 24px;
+  align-items: center;
+}
+.card-service-premium--aligned .card-service-premium__description {
+  min-height: 62px;
+}
+.card-service-premium--aligned .card-service-premium__footer {
+  width: 100%;
+}
+.card-service-premium--stretch .card-service-premium__footer {
+  width: 100%;
+}
+
+button[class*="rounded"],
+a[class*="rounded"],
+.vera-liquid-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translate3d(0, 0, 0);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 236, 210, 0.18);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    filter 220ms ease,
+    opacity 220ms ease;
+}
+
+button[class*="rounded"]::before,
+a[class*="rounded"]::before,
+.vera-liquid-button::before {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255, 239, 210, 0.34), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(255, 138, 42, 0.32), transparent 30%),
+    linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.18) 43%, rgba(255, 255, 255, 0.34) 50%, rgba(255, 255, 255, 0.14) 57%, transparent 100%);
+  opacity: 0;
+  transform: translateX(-26%) rotate(8deg);
+  transition: opacity 260ms ease, transform 620ms ease;
+  pointer-events: none;
+}
+
+button[class*="rounded"]::after,
+a[class*="rounded"]::after,
+.vera-liquid-button::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 42%),
+    radial-gradient(ellipse at 50% 120%, rgba(255, 255, 255, 0.12), transparent 58%);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+button[class*="rounded"]:hover,
+a[class*="rounded"]:hover,
+.vera-liquid-button:hover {
+  transform: translate3d(0, -2px, 0);
+  filter: saturate(1.08) brightness(1.04);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.34),
+    0 0 26px rgba(232, 102, 23, 0.18),
+    inset 0 1px 0 rgba(255, 236, 210, 0.28);
+}
+
+button[class*="rounded"]:hover::before,
+a[class*="rounded"]:hover::before,
+.vera-liquid-button:hover::before {
+  opacity: 1;
+  transform: translateX(20%) rotate(8deg);
+}
+
+button[class*="rounded"]:active,
+a[class*="rounded"]:active,
+.vera-liquid-button:active {
+  transform: translate3d(0, 0, 0) scale(0.985);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.28),
+    inset 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button[class*="rounded"],
+  a[class*="rounded"],
+  button[class*="rounded"]::before,
+  a[class*="rounded"]::before,
+  .vera-liquid-button,
+  .vera-liquid-button::before,
+  .vera-logo-shine,
+  .vera-logo-shine::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.vera-logo-shine {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  text-shadow: 0 0 18px rgba(232, 102, 23, 0.18);
+  transition: transform 220ms ease, filter 220ms ease, text-shadow 220ms ease;
+}
+
+.vera-logo-shine::after {
+  content: "";
+  position: absolute;
+  top: -18%;
+  bottom: -18%;
+  left: -70%;
+  width: 48%;
+  background: linear-gradient(105deg, transparent, rgba(255, 241, 214, 0.78), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vera-logo-shine:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.18) saturate(1.12);
+  text-shadow:
+    0 0 10px rgba(255, 190, 120, 0.42),
+    0 0 24px rgba(232, 102, 23, 0.34);
+}
+
+.vera-logo-shine:hover::after {
+  opacity: 1;
+  animation: vera-logo-sweep 820ms ease;
+}
+
+@keyframes vera-logo-sweep {
+  from { left: -70%; }
+  to { left: 128%; }
+}
+
 @media (max-width: 640px) {
   .card-service-premium {
     min-height: 220px !important;
+  }
+  .card-service-premium--aligned .card-service-premium__content {
+    min-height: 250px;
+    padding: 14px !important;
+  }
+  .card-service-premium--aligned .card-service-premium__title {
+    min-height: 58px;
+  }
+  .card-service-premium--aligned .card-service-premium__ribbon {
+    min-height: 36px;
+  }
+  .card-service-premium--aligned .card-service-premium__description {
+    min-height: 116px;
   }
 }
 

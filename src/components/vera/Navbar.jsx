@@ -35,7 +35,7 @@ export default function Navbar() {
     >
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="font-lobster transition-opacity hover:opacity-80" style={{ color: 'var(--accent-bright)', fontSize: '28px' }}>
+          <Link to="/" className="vera-logo-shine font-lobster" style={{ color: 'var(--accent-bright)', fontSize: '28px' }}>
             Вера Владимировна
           </Link>
           <nav className="hidden lg:flex items-center gap-8">

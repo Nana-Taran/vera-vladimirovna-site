@@ -61,7 +61,7 @@ export default function LyubovnayaMagiya() {
         <meta property="og:title" content="Помощь в отношениях и любовная магия — Вера Владимировна" />
         <meta property="og:description" content="Сложная ситуация в любви? Вера посмотрит что происходит и скажет честно, что можно сделать." />
         <meta property="og:url" content="https://veravladimirovna.com/lyubovnaya-magiya" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Помощь в отношениях и любовная магия — Вера Владимировна" />
         <meta name="twitter:description" content="Сложная ситуация в любви? Вера посмотрит что происходит и скажет честно, что можно сделать." />

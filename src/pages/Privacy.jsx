@@ -9,7 +9,6 @@ export default function Privacy() {
         <title>Политика конфиденциальности — Вера Владимировна</title>
         <meta name="description" content="Политика конфиденциальности сайта Веры Владимировны. Как мы обрабатываем и защищаем ваши данные." />
         <link rel="canonical" href="https://veravladimirovna.com/privacy" />
-        <meta name="robots" content="noindex" />
       </Helmet>
 
       <Navbar />
@@ -70,16 +69,22 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>4. COOKIES И АНАЛИТИКА</h2>
+              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>4. ХАРАКТЕР КОНСУЛЬТАЦИИ</h2>
+              <p>Консультации Веры Владимировны относятся к эзотерическим и духовным практикам. Они не являются медицинской, психологической, юридической или финансовой услугой и не заменяют обращение к профильному специалисту.</p>
+            </div>
+
+            <div>
+              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>5. COOKIES И АНАЛИТИКА</h2>
               <p>Сайт может использовать стандартные технологии (cookies, аналитические скрипты) для улучшения работы. Эти данные анонимны и не позволяют идентифицировать вас лично. Продолжая использовать сайт, вы соглашаетесь с использованием cookies.</p>
             </div>
 
             <div>
-              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>5. ВАШИ ПРАВА</h2>
+              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>6. ВАШИ ПРАВА</h2>
               <p>Вы вправе в любой момент:</p>
               <ul className="mt-3 space-y-2 list-none">
                 {[
                   'Запросить удаление ваших данных',
+                  'Запросить уточнение или исправление контактной информации',
                   'Отказаться от дальнейшей переписки',
                   'Задать вопрос об обработке ваших данных',
                 ].map((item, i) => (
@@ -93,7 +98,7 @@ export default function Privacy() {
             </div>
 
             <div>
-              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>6. ИЗМЕНЕНИЯ В ПОЛИТИКЕ</h2>
+              <h2 className="font-bebas mb-3" style={{ color: 'var(--text-white)', fontSize: '24px', letterSpacing: '0.05em' }}>7. ИЗМЕНЕНИЯ В ПОЛИТИКЕ</h2>
               <p>Мы можем обновлять данную политику. Актуальная версия всегда доступна на этой странице.</p>
             </div>
 

@@ -64,7 +64,7 @@ export default function Kontakty() {
         <meta property="og:title" content="Контакты — Вера Владимировна" />
         <meta property="og:description" content="Написать Вере Владимировне в Telegram или WhatsApp. Онлайн-консультация из любой страны." />
         <meta property="og:url" content="https://veravladimirovna.com/kontakty" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Контакты — Вера Владимировна" />
         <meta name="twitter:description" content="Написать Вере Владимировне в Telegram или WhatsApp. Онлайн-консультация из любой страны." />

@@ -15,7 +15,7 @@ export default function RusskieVGermanii() {
         <meta property="og:title" content="Ясновидящая для русских в Германии — Вера Владимировна" />
         <meta property="og:description" content="Онлайн-консультация ясновидящей для русскоязычных в Германии. 35 лет практики." />
         <meta property="og:url" content="https://veravladimirovna.com/russkie-v-germanii" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ясновидящая для русских в Германии — Вера Владимировна" />
         <meta name="twitter:description" content="Онлайн-консультация ясновидящей для русскоязычных в Германии. 35 лет практики." />

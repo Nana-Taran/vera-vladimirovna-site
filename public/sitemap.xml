@@ -12,6 +12,10 @@
   <url><loc>https://veravladimirovna.com/faq</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://veravladimirovna.com/ierusalim</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://veravladimirovna.com/kontakty</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://veravladimirovna.com/privacy</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://veravladimirovna.com/ai/summary.md</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://veravladimirovna.com/ai/services.md</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://veravladimirovna.com/ai/faq.md</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://veravladimirovna.com/russkie-v-anglii</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://veravladimirovna.com/russkie-v-argentine</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://veravladimirovna.com/russkie-v-avstralii</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>

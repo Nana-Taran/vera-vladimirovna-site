@@ -73,7 +73,7 @@ export default function FaqPage() {
         <meta property="og:title" content="Вопросы и ответы — Вера Владимировна" />
         <meta property="og:description" content="Честные ответы о работе Веры Владимировны. Как проходит консультация, сколько стоит, насколько точно." />
         <meta property="og:url" content="https://veravladimirovna.com/faq" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Вопросы и ответы — Вера Владимировна" />
         <meta name="twitter:description" content="Честные ответы о работе Веры Владимировны. Как проходит консультация, сколько стоит, насколько точно." />

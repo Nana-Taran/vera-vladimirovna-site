@@ -56,7 +56,7 @@ export default function OMne() {
         <meta property="og:title" content="О Вере Владимировне — Ясновидящая с 35-летним опытом" />
         <meta property="og:description" content="Потомственная ясновидящая. 35 лет практики. Работает у Стены Плача в Иерусалиме. Онлайн для русскоязычных по всему миру." />
         <meta property="og:url" content="https://veravladimirovna.com/o-mne" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="О Вере Владимировне — Ясновидящая с 35-летним опытом" />
         <meta name="twitter:description" content="Потомственная ясновидящая. 35 лет практики. Работает у Стены Плача в Иерусалиме. Онлайн для русскоязычных по всему миру." />

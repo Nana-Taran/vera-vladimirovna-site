@@ -99,6 +99,8 @@ export default function ServiceCardPremium({
   noTopRadius = false,
   topImageSrc = null,
   showTopSlot = false,
+  alignContent = false,
+  stretchContent = false,
 }) {
   const EyebrowIcon = EYEBROW_ICONS[eyebrowIcon] || EyeSmall;
   const cardRef = useRef(null);
@@ -159,7 +161,7 @@ export default function ServiceCardPremium({
   return (
     <motion.article
       ref={cardRef}
-      className="card-service-premium"
+      className={`card-service-premium${alignContent ? ' card-service-premium--aligned' : ''}${stretchContent ? ' card-service-premium--stretch' : ''}`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}
@@ -214,7 +216,7 @@ export default function ServiceCardPremium({
           position: 'absolute',
           inset: 0,
           zIndex: 1,
-          background: 'linear-gradient(135deg, rgba(10,3,2,0.95) 0%, rgba(18,6,4,0.88) 50%, rgba(18,6,4,0.55) 100%)',
+          background: 'linear-gradient(90deg, rgba(10,3,2,0.96) 0%, rgba(13,4,3,0.90) 42%, rgba(18,6,4,0.62) 72%, rgba(18,6,4,0.42) 100%), linear-gradient(180deg, rgba(10,3,2,0.86) 0%, rgba(18,6,4,0.56) 48%, rgba(18,6,4,0.36) 100%)',
         }}
       />
 
@@ -295,11 +297,13 @@ export default function ServiceCardPremium({
 
       {/* Контент */}
       <div
+        className="card-service-premium__content"
         style={{
           position: 'relative',
           zIndex: 4,
           display: 'flex',
           flexDirection: 'column',
+          flex: alignContent || stretchContent ? 1 : undefined,
           padding: '16px',
           gap: '6px',
           transform: hovered ? 'translateZ(12px)' : 'translateZ(0px)',
@@ -309,6 +313,7 @@ export default function ServiceCardPremium({
         {/* Eyebrow */}
         {eyebrow && (
           <motion.div
+            className="card-service-premium__eyebrow"
             variants={eyebrowV}
             style={{
               display: 'flex',
@@ -340,7 +345,7 @@ export default function ServiceCardPremium({
         )}
 
         {/* Заголовок */}
-        <h3 style={{ margin: 0, fontFamily: '"Cormorant Garamond", serif', textTransform: 'uppercase', lineHeight: 0.9 }}>
+        <h3 className="card-service-premium__title" style={{ margin: 0, fontFamily: '"Cormorant Garamond", serif', textTransform: 'uppercase', lineHeight: 0.9 }}>
           {titleLine1 && (
             <motion.span
               variants={line1V}
@@ -378,6 +383,7 @@ export default function ServiceCardPremium({
         {/* Красная плашка */}
         {ribbon && (
           <motion.div
+            className="card-service-premium__ribbon"
             variants={ribbonV}
             style={{
               display: 'inline-flex',
@@ -407,6 +413,7 @@ export default function ServiceCardPremium({
         {/* Описание */}
         {description && (
           <motion.p
+            className="card-service-premium__description"
             variants={descV}
             style={{
               margin: 0,
@@ -462,7 +469,7 @@ export default function ServiceCardPremium({
         )}
         {/* Footer (кнопки и т.п.) */}
         {footer && (
-          <div style={{ marginTop: 'auto', paddingTop: '10px' }}>
+          <div className="card-service-premium__footer" style={{ marginTop: 'auto', paddingTop: '10px' }}>
             {footer}
           </div>
         )}

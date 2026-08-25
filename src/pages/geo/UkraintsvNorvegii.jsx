@@ -15,7 +15,7 @@ export default function UkraintsvNorvegii() {
         <meta property="og:title" content="Ясновидящая для украинцев в Норвегии — Вера Владимировна" />
         <meta property="og:description" content="Онлайн-консультация ясновидящей для украинцев в Норвегии. 35 лет практики." />
         <meta property="og:url" content="https://veravladimirovna.com/ukraintsy-v-norvegii" />
-        <meta property="og:image" content="https://veravladimirovna.com/images/og-vera.jpg" />
+        <meta property="og:image" content="https://veravladimirovna.com/images/hero/vera-hero-banner.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ясновидящая для украинцев в Норвегии — Вера Владимировна" />
         <meta name="twitter:description" content="Онлайн-консультация ясновидящей для украинцев в Норвегии. 35 лет практики." />
